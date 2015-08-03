@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Test | Title Belt</title>
+</head>
+<body>
+
+  <div class="container max">
+
+    <div class="col">
+      <h1>Title Belt: Grid Module Demo</h1>
+      <p class="col">
+        This is a simple demo to showcase the capabilities of what I consider a really simple modern grid syntax. I built this framework to allow me to think more logically about how I lay things out on my pages while enforcing a mobile-first approach to my content.
+      </p>
+
+      <p>
+        My approach doesn't use floats. I don't believe floats are necessary for basic layout concerns, so instead I use <code>inline-block</code> elements where the <code>.container</code> specifies a <code>font-size: 0</code> and then the <code>.col</code> class uses <code>font-size: initial</code> to reset things as needed.
+      </p>
+    </div>
+
+    <div class="hr spacer"></div>
+
+    <div class="col">
+      <h2>Static Column Grid Overview</h2>
+    </div>
+
+    <div class="col whole demo blue"><code>.col/.whole</code></div>
+
+    <div class="col half demo blue"><code>.half</code></div>
+    <div class="col half demo magenta"><code>.half</code></div>
+
+    <div class="col third demo blue"><code>.third</code></div>
+    <div class="col third demo magenta"><code>.third</code></div>
+    <div class="col third demo seafoam"><code>.third</code></div>
+
+    <div class="col fourth demo blue"><code>.fourth</code></div>
+    <div class="col fourth demo magenta"><code>.fourth</code></div>
+    <div class="col fourth demo seafoam"><code>.fourth</code></div>
+    <div class="col fourth demo violet"><code>.fourth</code></div>
+
+    <div class="col fifth demo blue"><code>.fifth</code></div>
+    <div class="col fifth demo magenta"><code>.fifth</code></div>
+    <div class="col fifth demo seafoam"><code>.fifth</code></div>
+    <div class="col fifth demo violet"><code>.fifth</code></div>
+    <div class="col fifth demo yellow"><code>.fifth</code></div>
+
+    <div class="col sixth demo blue"><code>.sixth</code></div>
+    <div class="col sixth demo magenta"><code>.sixth</code></div>
+    <div class="col sixth demo seafoam"><code>.sixth</code></div>
+    <div class="col sixth demo violet"><code>.sixth</code></div>
+    <div class="col sixth demo yellow"><code>.sixth</code></div>
+    <div class="col sixth demo green"><code>.sixth</code></div>
+
+
+    <div class="col seventh demo blue"><code>.seventh</code></div>
+    <div class="col seventh demo magenta"><code>.seventh</code></div>
+    <div class="col seventh demo seafoam"><code>.seventh</code></div>
+    <div class="col seventh demo violet"><code>.seventh</code></div>
+    <div class="col seventh demo yellow"><code>.seventh</code></div>
+    <div class="col seventh demo green"><code>.seventh</code></div>
+    <div class="col seventh demo blue"><code>.seventh</code></div>
+
+
+    <div class="col eighth demo blue"><code>.eighth</code></div>
+    <div class="col eighth demo magenta"><code>.eighth</code></div>
+    <div class="col eighth demo seafoam"><code>.eighth</code></div>
+    <div class="col eighth demo violet"><code>.eighth</code></div>
+    <div class="col eighth demo yellow"><code>.eighth</code></div>
+    <div class="col eighth demo green"><code>.eighth</code></div>
+    <div class="col eighth demo blue"><code>.eighth</code></div>
+    <div class="col eighth demo magenta"><code>.eighth</code></div>
+
+
+    <div class="hr spacer"></div>
+
+    <div class="col">
+      <h2>Mix and Match columns</h2>
+    </div>
+
+
+    <div class="col fourth demo blue"><code>.fourth</code></div>
+    <div class="col half demo magenta"><code>.half</code></div>
+    <div class="col fourth demo seafoam"><code>.fourth</code></div>
+
+
+    <div class="hr spacer"></div>
+
+    <div class="col half demo blue"><code>.half</code></div>
+    <div class="col fourth demo magenta"><code>.fourth</code></div>
+    <div class="col eighth demo seafoam"><code>.eighth</code></div>
+    <div class="col eighth demo violet"><code>.eighth</code></div>
+
+
+    <div class="hr spacer"></div>
+
+
+
+    <div class="col three-fourth demo blue"><code>.three-fourth</code></div>
+    <div class="col fourth demo magenta"><code>.fourth</code></div>
+
+
+    <div class="hr spacer"></div>
+
+
+    <div class="col fifth demo blue"><code>.fifth</code></div>
+    <div class="col three-fifth demo magenta"><code>.three-fifth</code></div>
+    <div class="col fifth demo seafoam"><code>.fifth</code></div>
+
+
+    <div class="hr spacer"></div>
+
+
+    <div class="col five-sixth demo blue"><code>.five-sixth</code></div>
+    <div class="col sixth demo magenta"><code>.sixth</code></div>
+
+
+    <div class="hr spacer"></div>
+
+
+    <div class="col two-seventh demo blue"><code>.two-seventh</code></div>
+    <div class="col five-seventh demo magenta"><code>.five-seventh</code></div>
+
+
+    <div class="hr spacer"></div>
+
+
+    <div class="col two-seventh demo blue"><code>.two-seventh</code></div>
+    <div class="col three-seventh demo magenta"><code>.three-seventh</code></div>
+    <div class="col two-seventh demo seafoam"><code>.two-seventh</code></div>
+
+
+
+    <div class="hr spacer"></div>
+
+
+    <div class="container center demo-dynamic-columns">
+      <div class="col">
+        <h2>Dynamic Column Overview</h2>
+        <p>
+          You can supply custom breakpoint layout reflows by applying an attribute to your column of <code>mobile="..."</code>, <code>tablet="..."</code>, <code>desktop="..."</code>. Since you're supplying a specific property for the given column at a given context, I believe it makes more sense as an attribute as opposed to a class as other frameworks do.
+        </p>
+
+<pre><code>
+&lt;div class="container"&gt;
+  &lt;div class="col vbaseline blue" mobile="whole" tablet="half" desktop="third"&gt;Bacon ipsum dolor amet...&lt;/div&gt;
+  &lt;div class="col vbaseline magenta" mobile="whole" tablet="half" desktop="fourth"&gt;Bacon ipsum dolor amet...&lt;/div&gt;
+  &lt;div class="col vbaseline seafoam" mobile="whole" tablet="half" desktop="third"&gt;Bacon ipsum dolor amet...&lt;/div&gt;
+  &lt;div class="col vtop violet" mobile="whole" tablet="half" desktop="fourth"&gt;Bacon ipsum dolor amet...&lt;/div&gt;
+  &lt;div class="col vtop yellow" mobile="whole" tablet="half" desktop="fifth"&gt;Bacon ipsum dolor amet...&lt;/div&gt;
+  &lt;div class="col vtop green" mobile="whole" tablet="half" desktop="fourth"&gt;Bacon ipsum dolor amet...&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <p>
+          The above snippet results in the following arrangement:
+        </p>
+      </div>
+
+      <div class="col demo vbaseline blue" mobile="whole" tablet="half" desktop="third">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+      <div class="col demo vbaseline magenta" mobile="whole" tablet="half" desktop="fourth">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+      <div class="col demo vbaseline seafoam" mobile="whole" tablet="half" desktop="third">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+      <div class="col demo vtop violet" mobile="whole" tablet="half" desktop="fourth">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+      <div class="col demo vtop yellow" mobile="whole" tablet="half" desktop="fifth">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+      <div class="col demo vtop green" mobile="whole" tablet="half" desktop="fourth">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+    </div>
+
+
+    <div class="hr spacer"></div>
+
+
+    <div class="container demo-nested-containers">
+      <div class="col">
+        <h2>Nested <code>.container</code>s work as well</h2>
+      </div>
+
+      <div class="container">
+        <figure class="col magenta" tablet="half">
+          <img src="http://placehold.it/350x150" alt="">
+          <figcaption>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt natus eos magni officiis, numquam ad cupiditate omnis quod adipisci cum quae aliquam reiciendis, aperiam dolorem eius, consequuntur veritatis dolore iusto.
+          </figcaption>
+        </figure>
+        <p class="col" tablet="half">
+          Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.
+        </p>
+      </div>
+      <div class="col box3">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+      <div class="col box4">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+      <div class="col box5">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+      <div class="col box6">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+
+      <div class="col orange">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+      <div class="col third box8" desktop="half">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+      <div class="col third box9" desktop="fourth">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+      <div class="col third box10" desktop="fourth">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+      <div class="col orange">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+      <div class="col box12">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+      <div class="col box13">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+      <div class="col box14">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+      <div class="col box15">Bacon ipsum dolor amet meatball pork loin kielbasa chicken fatback. Pork belly turkey flank, doner strip steak shank bresaola brisket pork loin ribeye shankle alcatra boudin landjaeger. Sausage tongue tri-tip alcatra sirloin. Sausage biltong meatloaf picanha cow. Shankle ham turkey bacon picanha filet mignon. Spare ribs short ribs shank, landjaeger t-bone andouille prosciutto fatback pancetta meatball.</div>
+    </div>
+
+  </div>
+
+</body>
+</html>

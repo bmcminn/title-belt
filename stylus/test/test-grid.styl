@@ -1,0 +1,93 @@
+
+//
+// DEMO STYLES
+//
+
+html
+  box-sizing: border-box
+  line-height: 1.5rem
+
+
+*, *:before, *:after
+  box-sizing: inherit
+
+
+.orange
+  background-color: #f90
+.magenta
+  background-color: #ff82cc
+.seafoam
+  background-color: #0f9
+.blue
+  background-color: #68c3ff
+.green
+  background-color: #9f0
+.violet
+  background-color: #D9A0FF
+.yellow
+  background-color: #FFFF94
+
+
+
+.container
+  // border: 3px solid goldenrod // uncomment this to show the various .containers used throughout this demo
+
+
+img
+  display: inline-block
+  width: 100%
+
+p
+  code
+    background-color: #e3e3e3
+    color: #3e3e3e
+    border-radius: 3px
+    padding: 0.25rem
+
+
+
+.demo-nested-containers
+  .col
+    padding: 1rem
+
+
+.demo
+  padding: 0.5rem
+
+  code
+    font-size: 1.5rem
+    line-height: 3rem
+    text-align: center
+
+
+.demo-dynamic-columns
+  .demo
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      right: 0
+      background-color: #3c3c3c
+      color: #f3f3f3
+      padding: 0.5rem 1rem
+
+
+@media all and (min-width: $mobile)
+  .demo-dynamic-columns
+    .demo
+      &::before
+        content: "mobile: " attr(mobile)
+
+
+@media all and (min-width: $tablet)
+  .demo-dynamic-columns
+    .demo
+      &::before
+        content: "tablet: " attr(tablet)
+
+
+@media all and (min-width: $desktop)
+  .demo-dynamic-columns
+    .demo
+      &::before
+        content: "desktop: " attr(desktop)

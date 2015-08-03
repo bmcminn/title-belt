@@ -1,0 +1,412 @@
+
+////////////////////////////////////////////////////////////
+//    ________________.-----------.___________________    //
+//   |                |   //^\\   |               \   |   //
+//   |   T I T L E    |  < CSS >  |   B  E  L  T   )  |   //
+//   |________________|   \\.//   |_______________/___|   //
+//                    `-----------'                       //
+//   Zot, Brandtley                                       //
+////////////////////////////////////////////////////////////
+
+
+
+//
+// BREAKPOINT DEFINITIONS
+//
+
+$desktop  = 1024px
+$tablet  = 480px
+$mobile  = 0
+
+
+
+//
+// DIMENSIONAL VARIABLES
+//
+
+$precision = 8
+
+
+$max-width = 1000px
+
+
+$whole    = 100%
+$half     = 50%
+$third    = round(100%/3, $precision)
+$fourth   = 25%
+$fifth    = 20%
+$sixth    = round(100%/6, $precision)
+$seventh  = round(100%/7, $precision)
+$eighth   = round(100%/8, $precision)
+
+
+
+//
+// GRID HELPERS
+//
+
+.hr,
+.spacer
+  margin: 2rem 0
+
+
+
+//
+// BASE GRID STYLES
+//
+
+.container,   // These are used identically, though use whichever makes the most
+.row          // sense semantically
+  boxSizing(border-box)
+  display: block
+  width: $whole
+  font-size: 0
+  line-height: 0
+
+  &.max
+    max-width: $max-width
+    margin-left: auto
+    margin-right: auto
+
+  &.center
+    text-align: center;
+
+
+.col
+  boxSizing(border-box)
+  display: inline-block
+  position: relative
+  margin: 0
+  width: $whole
+  vertical-align: top
+  font-size: initial
+  line-height: 1.5rem
+  text-align: initial
+
+  &.vcenter.col
+    vertical-align: center
+
+  &.vbaseline.col
+    vertical-align: baseline
+
+
+  &.whole
+    width: $whole
+
+
+  // HALFS
+  &.half
+    width: $half
+
+
+  // THIRDS
+  &.third
+    width: $third
+
+  &.two-third
+    width: ($third * 2)
+
+
+  // FOURTHS
+  &.fourth
+    width: $fourth
+
+  &.three-fourth
+    width: ($fourth * 3)
+
+
+  // FIFTHS
+  &.fifth
+    width: $fifth
+
+  &.two-fifth
+    width: ($fifth * 2)
+
+  &.three-fifth
+    width: ($fifth * 3)
+
+  &.four-fifth
+    width: ($fifth * 4)
+
+
+  // SIXTHS
+  &.sixth
+    width: $sixth
+
+  &.five-sixth
+    width: round($sixth * 5, $precision)
+
+
+  // SEVENTHS
+  &.seventh
+    width: $seventh
+
+  &.two-seventh
+    width: round($seventh * 2, $precision)
+
+  &.three-seventh
+    width: round($seventh * 3, $precision)
+
+  &.four-seventh
+    width: round($seventh * 4, $precision)
+
+  &.five-seventh
+    width: round($seventh * 5, $precision)
+
+  &.six-seventh
+    width: round($seventh * 6, $precision)
+
+
+  // EIGTHS
+  &.eighth
+    width: $eighth
+
+  &.three-eighth
+    width: ($eighth * 3)
+
+  &.five-eighth
+    width: ($eighth * 5)
+
+  &.seven-eighth
+    width: ($eighth * 7)
+
+
+
+//
+// MOBILE OVERRIDES
+//
+
+@media all and (min-width: $mobile)
+  .col
+    &[mobile="whole"]
+      width: $whole
+
+    &[mobile="half"]
+      width: $half
+
+
+    &[mobile="third"]
+      width: $third
+
+    &[mobile="two-third"]
+      width: ($third * 2)
+
+
+    &[mobile="fourth"]
+      width: $fourth
+
+    &[mobile="three-fourth"]
+      width: ($fourth * 3)
+
+
+    &[mobile="fifth"]
+      width: $fifth
+
+    &[mobile="two-fifth"]
+      width: ($fifth * 2)
+
+    &[mobile="three-fifth"]
+      width: ($fifth * 3)
+
+    &[mobile="four-fifth"]
+      width: ($fifth * 4)
+
+
+    &[mobile="sixth"]
+      width: $sixth
+
+    &[mobile="five-sixth"]
+      width: round($sixth * 5, $precision)
+
+
+    &[mobile="seventh"]
+      width: $seventh
+
+    &[mobile="two-seventh"]
+      width: round($seventh * 2, $precision)
+
+    &[mobile="three-seventh"]
+      width: round($seventh * 3, $precision)
+
+    &[mobile="four-seventh"]
+      width: round($seventh * 4, $precision)
+
+    &[mobile="five-seventh"]
+      width: round($seventh * 5, $precision)
+
+    &[mobile="six-seventh"]
+      width: round($seventh * 6, $precision)
+
+
+    &[mobile="eighth"]
+      width: $eighth
+
+    &[mobile="three-eighth"]
+      width: ($eighth * 3)
+
+    &[mobile="five-eighth"]
+      width: ($eighth * 5)
+
+    &[mobile="seven-eighth"]
+      width: ($eighth * 7)
+
+
+
+//
+// TABLET OVERRIDES
+//
+
+@media all and (min-width: $tablet)
+  .col
+    &[tablet="whole"]
+      width: $whole
+
+    &[tablet="half"]
+      width: $half
+
+
+    &[tablet="third"]
+      width: $third
+
+    &[tablet="two-third"]
+      width: ($third * 2)
+
+
+    &[tablet="fourth"]
+      width: $fourth
+
+    &[tablet="three-fourth"]
+      width: ($fourth * 3)
+
+
+    &[tablet="fifth"]
+      width: $fifth
+
+    &[tablet="two-fifth"]
+      width: ($fifth * 2)
+
+    &[tablet="three-fifth"]
+      width: ($fifth * 3)
+
+    &[tablet="four-fifth"]
+      width: ($fifth * 4)
+
+
+    &[tablet="sixth"]
+      width: $sixth
+
+    &[tablet="five-sixth"]
+      width: round($sixth * 5, $precision)
+
+
+    &[tablet="seventh"]
+      width: $seventh
+
+    &[tablet="two-seventh"]
+      width: round($seventh * 2, $precision)
+
+    &[tablet="three-seventh"]
+      width: round($seventh * 3, $precision)
+
+    &[tablet="four-seventh"]
+      width: round($seventh * 4, $precision)
+
+    &[tablet="five-seventh"]
+      width: round($seventh * 5, $precision)
+
+    &[tablet="six-seventh"]
+      width: round($seventh * 6, $precision)
+
+
+    &[tablet="eighth"]
+      width: $eighth
+
+    &[tablet="three-eighth"]
+      width: ($eighth * 3)
+
+    &[tablet="five-eighth"]
+      width: ($eighth * 5)
+
+    &[tablet="seven-eighth"]
+      width: ($eighth * 7)
+
+
+
+
+//
+// DESKTOP OVERRIDES
+//
+
+@media all and (min-width: $desktop)
+  .col
+    &[desktop="whole"]
+      width: $whole
+
+    &[desktop="half"]
+      width: $half
+
+
+    &[desktop="third"]
+      width: $third
+
+    &[desktop="two-third"]
+      width: ($third * 2)
+
+
+    &[desktop="fourth"]
+      width: $fourth
+
+    &[desktop="three-fourth"]
+      width: ($fourth * 3)
+
+
+    &[desktop="fifth"]
+      width: $fifth
+
+    &[desktop="two-fifth"]
+      width: ($fifth * 2)
+
+    &[desktop="three-fifth"]
+      width: ($fifth * 3)
+
+    &[desktop="four-fifth"]
+      width: ($fifth * 4)
+
+
+    &[desktop="sixth"]
+      width: $sixth
+
+    &[desktop="five-sixth"]
+      width: round($sixth * 5, $precision)
+
+
+    &[desktop="seventh"]
+      width: $seventh
+
+    &[desktop="two-seventh"]
+      width: round($seventh * 2, $precision)
+
+    &[desktop="three-seventh"]
+      width: round($seventh * 3, $precision)
+
+    &[desktop="four-seventh"]
+      width: round($seventh * 4, $precision)
+
+    &[desktop="five-seventh"]
+      width: round($seventh * 5, $precision)
+
+    &[desktop="six-seventh"]
+      width: round($seventh * 6, $precision)
+
+
+    &[desktop="eighth"]
+      width: $eighth
+
+    &[desktop="three-eighth"]
+      width: ($eighth * 3)
+
+    &[desktop="five-eighth"]
+      width: ($eighth * 5)
+
+    &[desktop="seven-eighth"]
+      width: ($eighth * 7)
