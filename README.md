@@ -12,5 +12,5 @@ This is a simple CSS framework intended to be intuitive and easy to use. More of
 - Update this thing to leverage generator mixins
 - Finish readme.md
     - Document grid.styl
-- Include build process
+- ~~Include build process~~
 - Convert to .less?
