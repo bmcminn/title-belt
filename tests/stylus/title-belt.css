@@ -1,5 +1,5 @@
 
-/* line 78 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 144 : D:\github\title-belt\tests\stylus\_test.styl */
 
 /* line 1 : D:\github\title-belt\node_modules\grunt-contrib-stylus\node_modules\stylus\lib\functions\index.styl */
 
@@ -9,13 +9,13 @@
 
 /* line 20 : D:\github\title-belt\stylus\main.styl */
 
-/* line 13 : D:\github\title-belt\stylus\_colors.styl */
+/* line 12 : D:\github\title-belt\stylus\_colors.styl */
 
-/* line 16 : D:\github\title-belt\stylus\_colors.styl */
+/* line 15 : D:\github\title-belt\stylus\_colors.styl */
 
 /* line 1 : D:\github\title-belt\stylus\_mixins.styl */
 
-/* line 3 : D:\github\title-belt\stylus\_mixins.styl */
+/* line 15 : D:\github\title-belt\stylus\_mixins.styl */
 
 /* line 5 : D:\github\title-belt\stylus\_normalize.styl */
 
@@ -309,7 +309,22 @@ pre code {
   padding: 0;
 }
 
-/* line 31 : D:\github\title-belt\stylus\_typography.styl */
+/* line 38 : D:\github\title-belt\stylus\_typography.styl */
+.text-left {
+  text-align: left;
+}
+
+/* line 41 : D:\github\title-belt\stylus\_typography.styl */
+.text-center {
+  text-align: center;
+}
+
+/* line 44 : D:\github\title-belt\stylus\_typography.styl */
+.text-right {
+  text-align: right;
+}
+
+/* line 45 : D:\github\title-belt\stylus\_typography.styl */
 
 /* line 17 : D:\github\title-belt\stylus\_grid.styl */
 
@@ -366,12 +381,12 @@ body > .container {
 }
 
 /* line 95 : D:\github\title-belt\stylus\_grid.styl */
-.col.vcenter.col {
+.col.vcenter {
   vertical-align: center;
 }
 
 /* line 98 : D:\github\title-belt\stylus\_grid.styl */
-.col.vbaseline.col {
+.col.vbaseline {
   vertical-align: baseline;
 }
 
@@ -949,9 +964,9 @@ body > .container {
 
 /* line 498 : D:\github\title-belt\stylus\_grid.styl */
 
-/* line 13 : D:\github\title-belt\stylus\_button.styl */
+/* line 12 : D:\github\title-belt\stylus\_button.styl */
 
-/* line 17 : D:\github\title-belt\stylus\_button.styl */
+/* line 15 : D:\github\title-belt\stylus\_button.styl */
 button,
 .button,
 [type="button"],
@@ -966,7 +981,7 @@ button,
   appearance: none;
 }
 
-/* line 30 : D:\github\title-belt\stylus\_button.styl */
+/* line 28 : D:\github\title-belt\stylus\_button.styl */
 button:active,
 .button:active,
 [type="button"]:active,
@@ -975,7 +990,7 @@ button:active,
   background-color: #c7c7c7;
 }
 
-/* line 34 : D:\github\title-belt\stylus\_button.styl */
+/* line 32 : D:\github\title-belt\stylus\_button.styl */
 button.rounded,
 .button.rounded,
 [type="button"].rounded,
@@ -984,7 +999,7 @@ button.rounded,
   border-radius: 3px;
 }
 
-/* line 37 : D:\github\title-belt\stylus\_button.styl */
+/* line 35 : D:\github\title-belt\stylus\_button.styl */
 button.circle,
 .button.circle,
 [type="button"].circle,
@@ -994,9 +1009,9 @@ button.circle,
   padding: 1rem;
 }
 
-/* line 43 : D:\github\title-belt\stylus\_button.styl */
+/* line 41 : D:\github\title-belt\stylus\_button.styl */
 
-/* line 44 : D:\github\title-belt\stylus\_button.styl */
+/* line 42 : D:\github\title-belt\stylus\_button.styl */
 .rounded button,
 .rounded .button,
 .rounded [type="button"],
@@ -1005,7 +1020,7 @@ button.circle,
   border-radius: 3px;
 }
 
-/* line 49 : D:\github\title-belt\stylus\_button.styl */
+/* line 47 : D:\github\title-belt\stylus\_button.styl */
 
 /* line 12 : D:\github\title-belt\stylus\_form.styl */
 
@@ -1014,12 +1029,146 @@ form,
 .form {
   display: block;
   width: 100%;
-  border: 1px solid buttonface;
   border-top: 0;
   border-left: 0;
 }
 
-/* line 24 : D:\github\title-belt\stylus\_form.styl */
+/* line 23 : D:\github\title-belt\stylus\_form.styl */
+form h1,
+.form h1,
+form .h1,
+.form .h1,
+form h2,
+.form h2,
+form .h2,
+.form .h2,
+form h3,
+.form h3,
+form .h3,
+.form .h3,
+form h4,
+.form h4,
+form .h4,
+.form .h4,
+form h5,
+.form h5,
+form .h5,
+.form .h5,
+form h6,
+.form h6,
+form .h6,
+.form .h6 {
+  padding: 0.75rem;
+}
+
+/* line 32 : D:\github\title-belt\stylus\_form.styl */
+label {
+  padding: 0.75rem;
+  vertical-align: baseline;
+}
+
+/* line 37 : D:\github\title-belt\stylus\_form.styl */
+label input,
+label select {
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid buttonface;
+  line-height: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+/* line 47 : D:\github\title-belt\stylus\_form.styl */
+
+/* line 48 : D:\github\title-belt\stylus\_form.styl */
+select option {
+  min-height: 1rem;
+  line-height: 1.5rem;
+}
+
+/* line 14 : D:\github\title-belt\tests\stylus\_test.styl */
+.blue {
+  background-color: #57bcff;
+}
+
+/* line 17 : D:\github\title-belt\tests\stylus\_test.styl */
+.violet {
+  background-color: #c672ff;
+}
+
+/* line 20 : D:\github\title-belt\tests\stylus\_test.styl */
+.magenta {
+  background-color: #ff82cc;
+}
+
+/* line 23 : D:\github\title-belt\tests\stylus\_test.styl */
+.orange {
+  background-color: #ffc66f;
+}
+
+/* line 26 : D:\github\title-belt\tests\stylus\_test.styl */
+.yellow {
+  background-color: #ffff94;
+}
+
+/* line 29 : D:\github\title-belt\tests\stylus\_test.styl */
+.green {
+  background-color: #9fa;
+}
+
+/* line 33 : D:\github\title-belt\tests\stylus\_test.styl */
+img {
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 38 : D:\github\title-belt\tests\stylus\_test.styl */
+
+/* line 39 : D:\github\title-belt\tests\stylus\_test.styl */
+.demo-nested-containers .col {
+  padding: 1rem;
+}
+
+/* line 43 : D:\github\title-belt\tests\stylus\_test.styl */
+.demo {
+  padding: 0.5rem;
+}
+
+/* line 46 : D:\github\title-belt\tests\stylus\_test.styl */
+.demo code {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  text-align: center;
+  background-color: transparent;
+}
+
+/* line 53 : D:\github\title-belt\tests\stylus\_test.styl */
+
+/* line 54 : D:\github\title-belt\tests\stylus\_test.styl */
+
+/* line 55 : D:\github\title-belt\tests\stylus\_test.styl */
+.demo-dynamic-columns .demo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #3c3c3c;
+  color: #f3f3f3;
+  padding: 0.5rem 1rem;
+}
+
+/* line 73 : D:\github\title-belt\tests\stylus\_test.styl */
+form,
+.form {
+  border: 1px solid buttonface;
+  border-top: 0;
+  border-left: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* line 81 : D:\github\title-belt\tests\stylus\_test.styl */
 form h1,
 .form h1,
 form .h1,
@@ -1047,145 +1196,92 @@ form .h6,
   border: 1px solid buttonface;
   border-bottom: 0;
   border-right: 0;
-  padding: 0.75rem;
-  background-color: buttonface;
+  background-color: #eee;
 }
 
-/* line 38 : D:\github\title-belt\stylus\_form.styl */
+/* line 93 : D:\github\title-belt\tests\stylus\_test.styl */
+form button,
+.form button,
+form .button,
+.form .button,
+form [type="button"],
+.form [type="button"],
+form [type="submit"],
+.form [type="submit"],
+form [type="reset"],
+.form [type="reset"] {
+  text-align: center;
+}
+
+/* line 100 : D:\github\title-belt\tests\stylus\_test.styl */
+form [type="reset"],
+.form [type="reset"] {
+  opacity: 0.5;
+  transition: opacity 0.2s linear;
+}
+
+/* line 104 : D:\github\title-belt\tests\stylus\_test.styl */
+form [type="reset"]:hover,
+.form [type="reset"]:hover {
+  opacity: 1;
+}
+
+/* line 107 : D:\github\title-belt\tests\stylus\_test.styl */
 label {
-  padding: 0.75rem;
-  vertical-align: baseline;
   border: 1px solid buttonface;
   border-right: 0;
   border-bottom: 0;
 }
 
-/* line 46 : D:\github\title-belt\stylus\_form.styl */
+/* line 113 : D:\github\title-belt\tests\stylus\_test.styl */
 label input,
 label select {
-  -webkit-appearance: none;
-  appearance: none;
-  box-sizing: border-box;
-  width: 100%;
   border: 0;
   border-bottom: 1px solid buttonface;
-  line-height: 1.5rem;
-  padding: 0.5rem 0.75rem;
+  transition: all 0.2s linear;
 }
 
-/* line 57 : D:\github\title-belt\stylus\_form.styl */
-
-/* line 58 : D:\github\title-belt\stylus\_form.styl */
-select option {
-  min-height: 1rem;
-  line-height: 1.5rem;
+/* line 119 : D:\github\title-belt\tests\stylus\_test.styl */
+label input:focus,
+label select:focus {
+  outline: 0;
+  border-bottom-color: #f90;
 }
 
-/* line 9 : D:\github\title-belt\tests\stylus\_test.styl */
-.blue {
-  background-color: #57bcff;
-}
-
-/* line 12 : D:\github\title-belt\tests\stylus\_test.styl */
-.violet {
-  background-color: #c672ff;
-}
-
-/* line 15 : D:\github\title-belt\tests\stylus\_test.styl */
-.magenta {
-  background-color: #ff82cc;
-}
-
-/* line 18 : D:\github\title-belt\tests\stylus\_test.styl */
-.orange {
-  background-color: #ffc66f;
-}
-
-/* line 21 : D:\github\title-belt\tests\stylus\_test.styl */
-.yellow {
-  background-color: #ffff94;
-}
-
-/* line 24 : D:\github\title-belt\tests\stylus\_test.styl */
-.green {
-  background-color: #9fa;
-}
-
-/* line 28 : D:\github\title-belt\tests\stylus\_test.styl */
-img {
-  display: inline-block;
-  width: 100%;
-}
-
-/* line 33 : D:\github\title-belt\tests\stylus\_test.styl */
-
-/* line 34 : D:\github\title-belt\tests\stylus\_test.styl */
-.demo-nested-containers .col {
-  padding: 1rem;
-}
-
-/* line 38 : D:\github\title-belt\tests\stylus\_test.styl */
-.demo {
-  padding: 0.5rem;
-}
-
-/* line 41 : D:\github\title-belt\tests\stylus\_test.styl */
-.demo code {
-  font-size: 1.5rem;
-  line-height: 3rem;
-  text-align: center;
-  background-color: transparent;
-}
-
-/* line 48 : D:\github\title-belt\tests\stylus\_test.styl */
-
-/* line 49 : D:\github\title-belt\tests\stylus\_test.styl */
-
-/* line 50 : D:\github\title-belt\tests\stylus\_test.styl */
-.demo-dynamic-columns .demo::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #3c3c3c;
-  color: #f3f3f3;
-  padding: 0.5rem 1rem;
-}
-
-/* line 60 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 126 : D:\github\title-belt\tests\stylus\_test.styl */
 @media all and (min-width: 0) {
 
-/* line 61 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 127 : D:\github\title-belt\tests\stylus\_test.styl */
 
-/* line 62 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 128 : D:\github\title-belt\tests\stylus\_test.styl */
 
-/* line 63 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 129 : D:\github\title-belt\tests\stylus\_test.styl */
   .demo-dynamic-columns .demo::before {
     content: "mobile: " attr(mobile);
   }
 }
 
-/* line 67 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 133 : D:\github\title-belt\tests\stylus\_test.styl */
 @media all and (min-width: 480px) {
 
-/* line 68 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 134 : D:\github\title-belt\tests\stylus\_test.styl */
 
-/* line 69 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 135 : D:\github\title-belt\tests\stylus\_test.styl */
 
-/* line 70 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 136 : D:\github\title-belt\tests\stylus\_test.styl */
   .demo-dynamic-columns .demo::before {
     content: "tablet: " attr(tablet);
   }
 }
 
-/* line 74 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 140 : D:\github\title-belt\tests\stylus\_test.styl */
 @media all and (min-width: 1024px) {
 
-/* line 75 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 141 : D:\github\title-belt\tests\stylus\_test.styl */
 
-/* line 76 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 142 : D:\github\title-belt\tests\stylus\_test.styl */
 
-/* line 77 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 143 : D:\github\title-belt\tests\stylus\_test.styl */
   .demo-dynamic-columns .demo::before {
     content: "desktop: " attr(desktop);
   }

@@ -5,24 +5,23 @@
     </div>
 
 
-    <form action="" class="container center">
-
+    <form action="post" class="container hcenter">
 
       <h2 class="col">User Info</h2>
 
       <label for="firstname" class="col" mobile="two-third" tablet="two-fifth" desktop="four-tenth">
         First Name
-        <input type="text" id="firstname" name="firstname" value="">
+        <input type="text" id="firstname" name="firstname" value="" placeholder="John">
       </label>
 
       <label for="middleinitial" class="col" mobile="third" tablet="fifth" desktop="fifth">
         Middle
-        <input type="text" id="middleinitial" name="middleinitial" value="">
+        <input type="text" id="middleinitial" name="middleinitial" value="" placeholder="T">
       </label>
 
       <label for="lastname" class="col" tablet="two-fifth" desktop="four-tenth">
         Last Name
-        <input type="text" id="lastname" name="lastname" value="">
+        <input type="text" id="lastname" name="lastname" value="" placeholder="Smith">
       </label>
 
 
@@ -30,22 +29,23 @@
 
       <label for="primarynumber" class="col" tablet="third" desktop="fourth">
         Primary Phone
-        <input type="tel" id="primarynumber" name="primarynumber" value="">
+        <input type="tel" id="primarynumber" name="primarynumber" value="" placeholder="555-123-4567">
       </label>
 
       <label for="faxnumber" class="col" tablet="third" desktop="fourth">
         Fax Phone
-        <input type="tel" id="faxnumber" name="faxnumber" value="">
+        <input type="tel" id="faxnumber" name="faxnumber" value="" placeholder="555-123-4567">
       </label>
 
       <label for="primaryemail" class="col" tablet="third" desktop="half">
         Email
-        <input type="email" id="primaryemail" name="primaryemail" value="">
+        <input type="email" id="primaryemail" name="primaryemail" value="" placeholder="name@email.com">
       </label>
+
 
       <label for="yourwebsite" class="col" tablet="whole">
         Website
-        <input type="url" id="yourwebsite" name="yourwebsite" value="">
+        <input type="url" id="yourwebsite" name="yourwebsite" value="" placeholder="http://something.com">
       </label>
 
 
@@ -54,13 +54,14 @@
 
         <label for="addressstreet" class="col" desktop="half">
           Address
-          <input type="text" id="addressstreet" name="addressstreet" value="">
+          <input type="text" id="addressstreet" name="addressstreet" value="" placeholder="1234 Street Dr.">
         </label>
 
         <label for="addressstreet2" class="col" desktop="half">
           Address 2 (Optional)
-          <input type="text" id="addressstreet2" name="addressstreet2" value="">
+          <input type="text" id="addressstreet2" name="addressstreet2" value="" placeholder="Apt #, Building #, Suite #">
         </label>
+
 
         <label for="addresscity" class="col" tablet="two-fifth">
           City
@@ -77,10 +78,15 @@
 
         <label for="addresszip" class="col" mobile="two-fifth" tablet="fifth">
           Zip Code
-          <input type="number" id="addresszip" name="addresszip" value="" min="00001">
+          <input type="number" id="addresszip" name="addresszip" value="" min="11111" placeholder="00000">
         </label>
       </div>
 
+
+      <div class="row center">
+        <button type="submit" class="col" tablet="half">Submit</button>
+        <button type="reset" class="col" tablet="fourth">Reset</button>
+      </div>
 
 
 
