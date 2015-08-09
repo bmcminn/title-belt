@@ -1007,13 +1007,78 @@ button.circle,
 
 /* line 49 : D:\github\title-belt\stylus\_button.styl */
 
-/* line 9 : D:\github\title-belt\stylus\_form.styl */
+/* line 12 : D:\github\title-belt\stylus\_form.styl */
 
-/* line 13 : D:\github\title-belt\stylus\_form.styl */
+/* line 15 : D:\github\title-belt\stylus\_form.styl */
 form,
 .form {
   display: block;
   width: 100%;
+  border: 1px solid buttonface;
+  border-top: 0;
+  border-left: 0;
+}
+
+/* line 24 : D:\github\title-belt\stylus\_form.styl */
+form h1,
+.form h1,
+form .h1,
+.form .h1,
+form h2,
+.form h2,
+form .h2,
+.form .h2,
+form h3,
+.form h3,
+form .h3,
+.form .h3,
+form h4,
+.form h4,
+form .h4,
+.form .h4,
+form h5,
+.form h5,
+form .h5,
+.form .h5,
+form h6,
+.form h6,
+form .h6,
+.form .h6 {
+  border: 1px solid buttonface;
+  border-bottom: 0;
+  border-right: 0;
+  padding: 0.75rem;
+  background-color: buttonface;
+}
+
+/* line 38 : D:\github\title-belt\stylus\_form.styl */
+label {
+  padding: 0.75rem;
+  vertical-align: baseline;
+  border: 1px solid buttonface;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+/* line 46 : D:\github\title-belt\stylus\_form.styl */
+label input,
+label select {
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid buttonface;
+  line-height: 1.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+/* line 57 : D:\github\title-belt\stylus\_form.styl */
+
+/* line 58 : D:\github\title-belt\stylus\_form.styl */
+select option {
+  min-height: 1rem;
+  line-height: 1.5rem;
 }
 
 /* line 9 : D:\github\title-belt\tests\stylus\_test.styl */

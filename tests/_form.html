@@ -4,21 +4,84 @@
       <p></p>
     </div>
 
-    <div class="hr spacer"></div>
+
+    <form action="" class="container center">
 
 
-    <form action="" class="container">
+      <h2 class="col">User Info</h2>
 
-      <label for="firstname" class="col three-eighth">
+      <label for="firstname" class="col" mobile="two-third" tablet="two-fifth" desktop="four-tenth">
+        First Name
         <input type="text" id="firstname" name="firstname" value="">
       </label>
 
-      <label for="middleinitial" class="col one-fourth">
+      <label for="middleinitial" class="col" mobile="third" tablet="fifth" desktop="fifth">
+        Middle
         <input type="text" id="middleinitial" name="middleinitial" value="">
       </label>
 
-      <label for="lastname" class="col three-eighth">
+      <label for="lastname" class="col" tablet="two-fifth" desktop="four-tenth">
+        Last Name
         <input type="text" id="lastname" name="lastname" value="">
       </label>
+
+
+      <h2 class="col">Contact Info</h2>
+
+      <label for="primarynumber" class="col" tablet="third" desktop="fourth">
+        Primary Phone
+        <input type="tel" id="primarynumber" name="primarynumber" value="">
+      </label>
+
+      <label for="faxnumber" class="col" tablet="third" desktop="fourth">
+        Fax Phone
+        <input type="tel" id="faxnumber" name="faxnumber" value="">
+      </label>
+
+      <label for="primaryemail" class="col" tablet="third" desktop="half">
+        Email
+        <input type="email" id="primaryemail" name="primaryemail" value="">
+      </label>
+
+      <label for="yourwebsite" class="col" tablet="whole">
+        Website
+        <input type="url" id="yourwebsite" name="yourwebsite" value="">
+      </label>
+
+
+      <div class="row">
+        <h2 class="col">Address Info</h2>
+
+        <label for="addressstreet" class="col" desktop="half">
+          Address
+          <input type="text" id="addressstreet" name="addressstreet" value="">
+        </label>
+
+        <label for="addressstreet2" class="col" desktop="half">
+          Address 2 (Optional)
+          <input type="text" id="addressstreet2" name="addressstreet2" value="">
+        </label>
+
+        <label for="addresscity" class="col" tablet="two-fifth">
+          City
+          <input type="text" id="addresscity" name="addresscity" value="">
+        </label>
+
+        <label for="addressstate" class="col" mobile="three-fifth" tablet="two-fifth">
+          State
+          <select name="addressstate" id="addressstate">
+            <option value="al">Alabama</option>
+            <option value="ak">Alaska</option>
+          </select>
+        </label>
+
+        <label for="addresszip" class="col" mobile="two-fifth" tablet="fifth">
+          Zip Code
+          <input type="number" id="addresszip" name="addresszip" value="" min="00001">
+        </label>
+      </div>
+
+
+
 
     </form>
