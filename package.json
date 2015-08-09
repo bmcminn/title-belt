@@ -1,0 +1,45 @@
+{
+  "name": "title-belt",
+  "version": "0.0.1",
+  "description": "CSS framework for the Throwdown PHP framework.",
+  "author": "Brandtley McMinn",
+  "license": "MIT",
+  "main": "",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmcminn/title-belt.git"
+  },
+  "keywords": [
+    "CSS",
+    "Framework",
+    "Grid",
+    "Form",
+    "Button",
+    "Validation",
+    "Stylus",
+    "Less",
+    "Sass"
+  ],
+  "bugs": {
+    "url": "https://github.com/bmcminn/title-belt/issues"
+  },
+  "homepage": "https://github.com/bmcminn/title-belt#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^4.0.0",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-stylus": "^0.22.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jsonlint": "^1.0.4",
+    "grunt-php": "^1.5.0",
+    "load-grunt-config": "^0.17.2",
+    "time-grunt": "^1.2.1"
+  }
+}

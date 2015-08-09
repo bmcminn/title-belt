@@ -1,0 +1,105 @@
+
+//
+// DEMO STYLES
+//
+
+@import "../../stylus/main.styl";
+
+
+
+.blue {
+  background-color: #57bcff;
+}
+
+.violet {
+  background-color: #c672ff;
+}
+
+.magenta {
+  background-color: #ff82cc;
+}
+
+.orange {
+  background-color: #ffc66f;
+}
+
+.yellow {
+  background-color: #ffff94;
+}
+
+.green {
+  background-color: #9fa;
+}
+
+
+
+img {
+  display: inline-block;
+  width: 100%;
+}
+
+
+.demo-nested-containers {
+  .col {
+    padding: 1rem;
+  }
+}
+
+
+.demo {
+  padding: 0.5rem;
+
+  code {
+      font-size: 1.5rem;
+      line-height: 3rem;
+      text-align: center;
+  }
+}
+
+
+.demo-dynamic-columns {
+  .demo {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #3c3c3c;
+      color: #f3f3f3;
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
+
+@media all and (min-width: @mobile) {
+  .demo-dynamic-columns {
+    .demo {
+      &::before {
+        content: "mobile: " attr(mobile)
+      }
+    }
+  }
+}
+
+
+@media all and (min-width: @tablet) {
+  .demo-dynamic-columns {
+    .demo {
+      &::before {
+        content: "tablet: " attr(tablet)
+      }
+    }
+  }
+}
+
+
+@media all and (min-width: @desktop) {
+  .demo-dynamic-columns {
+    .demo {
+      &::before {
+        content: "desktop: " attr(desktop)
+      }
+    }
+  }
+}

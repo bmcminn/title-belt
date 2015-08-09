@@ -39,6 +39,7 @@ $sixth    = round(100%/6, $precision)
 $seventh  = round(100%/7, $precision)
 $eighth   = round(100%/8, $precision)
 
+$tenth    = 10%
 
 
 //
@@ -50,10 +51,18 @@ $eighth   = round(100%/8, $precision)
   margin: 2rem 0
 
 
+.hr
+  height: 0
+  border-bottom: 2px solid $graylight
+
+
 
 //
 // BASE GRID STYLES
 //
+body > .container
+  padding: 1rem
+
 
 .container,   // These are used identically, though use whichever makes the most
 .row          // sense semantically
@@ -80,7 +89,7 @@ $eighth   = round(100%/8, $precision)
   width: $whole
   vertical-align: top
   font-size: initial
-  line-height: 1.5rem
+  line-height: $line-height
   text-align: initial
 
   &.vcenter.col
@@ -171,6 +180,26 @@ $eighth   = round(100%/8, $precision)
     width: ($eighth * 7)
 
 
+  // TENTHS
+  &.tenth
+    width: $tenth
+
+  &.three-tenth
+    width: ($tenth * 3)
+
+  &.four-tenth
+    width: ($tenth * 4)
+
+  &.sixth-tenth
+    width: ($tenth * 6)
+
+  &.seven-tenth
+    width: ($tenth * 7)
+
+  &.nine-tenth
+    width: ($tenth * 9)
+
+
 
 //
 // MOBILE OVERRIDES
@@ -249,6 +278,26 @@ $eighth   = round(100%/8, $precision)
 
     &[mobile="seven-eighth"]
       width: ($eighth * 7)
+
+
+    &[mobile="tenth"]
+      width: $tenth
+
+    &[mobile="three-tenth"]
+      width: ($tenth * 3)
+
+    &[mobile="four-tenth"]
+      width: ($tenth * 4)
+
+    &[mobile="sixth-tenth"]
+      width: ($tenth * 6)
+
+    &[mobile="seven-tenth"]
+      width: ($tenth * 7)
+
+    &[mobile="nine-tenth"]
+      width: ($tenth * 9)
+
 
 
 
@@ -331,6 +380,24 @@ $eighth   = round(100%/8, $precision)
       width: ($eighth * 7)
 
 
+    &[tablet="tenth"]
+      width: $tenth
+
+    &[tablet="three-tenth"]
+      width: ($tenth * 3)
+
+    &[tablet="four-tenth"]
+      width: ($tenth * 4)
+
+    &[tablet="sixth-tenth"]
+      width: ($tenth * 6)
+
+    &[tablet="seven-tenth"]
+      width: ($tenth * 7)
+
+    &[tablet="nine-tenth"]
+      width: ($tenth * 9)
+
 
 
 //
@@ -410,3 +477,22 @@ $eighth   = round(100%/8, $precision)
 
     &[desktop="seven-eighth"]
       width: ($eighth * 7)
+
+
+    &[desktop="tenth"]
+      width: $tenth
+
+    &[desktop="three-tenth"]
+      width: ($tenth * 3)
+
+    &[desktop="four-tenth"]
+      width: ($tenth * 4)
+
+    &[desktop="sixth-tenth"]
+      width: ($tenth * 6)
+
+    &[desktop="seven-tenth"]
+      width: ($tenth * 7)
+
+    &[desktop="nine-tenth"]
+      width: ($tenth * 9)
