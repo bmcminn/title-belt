@@ -69,7 +69,6 @@ img
 // FORM STYLES
 //
 
-
 form,
 .form
   border: 1px solid buttonface
@@ -88,6 +87,8 @@ form,
     border-bottom: 0
     border-right: 0
     background-color: lighten($dimgray, 50%)
+    margin: 0
+    font-size: 1rem
 
 
   button,
@@ -104,13 +105,17 @@ form,
     &:hover
       opacity: 1
 
+
 label
   border: 1px solid buttonface
   border-right: 0
   border-bottom: 0
 
-
-  input,
+  [type="text"],
+  [type="url"],
+  [type="number"],
+  [type="email"],
+  [type="tel"],
   select
     border: 0
     border-bottom: 1px solid buttonface
@@ -119,7 +124,6 @@ label
     &:focus
       outline: 0
       border-bottom-color: #f90
-
 
 
 

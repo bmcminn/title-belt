@@ -1,5 +1,5 @@
 
-/* line 144 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 150 : D:\github\title-belt\tests\stylus\_test.styl */
 
 /* line 1 : D:\github\title-belt\node_modules\grunt-contrib-stylus\node_modules\stylus\lib\functions\index.styl */
 
@@ -990,7 +990,7 @@ button:active,
   background-color: #c7c7c7;
 }
 
-/* line 32 : D:\github\title-belt\stylus\_button.styl */
+/* line 31 : D:\github\title-belt\stylus\_button.styl */
 button.rounded,
 .button.rounded,
 [type="button"].rounded,
@@ -999,7 +999,7 @@ button.rounded,
   border-radius: 3px;
 }
 
-/* line 35 : D:\github\title-belt\stylus\_button.styl */
+/* line 34 : D:\github\title-belt\stylus\_button.styl */
 button.circle,
 .button.circle,
 [type="button"].circle,
@@ -1009,9 +1009,9 @@ button.circle,
   padding: 1rem;
 }
 
-/* line 41 : D:\github\title-belt\stylus\_button.styl */
+/* line 40 : D:\github\title-belt\stylus\_button.styl */
 
-/* line 42 : D:\github\title-belt\stylus\_button.styl */
+/* line 41 : D:\github\title-belt\stylus\_button.styl */
 .rounded button,
 .rounded .button,
 .rounded [type="button"],
@@ -1020,7 +1020,7 @@ button.circle,
   border-radius: 3px;
 }
 
-/* line 47 : D:\github\title-belt\stylus\_button.styl */
+/* line 46 : D:\github\title-belt\stylus\_button.styl */
 
 /* line 12 : D:\github\title-belt\stylus\_form.styl */
 
@@ -1064,11 +1064,15 @@ form .h6,
 /* line 32 : D:\github\title-belt\stylus\_form.styl */
 label {
   padding: 0.75rem;
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 
 /* line 37 : D:\github\title-belt\stylus\_form.styl */
-label input,
+label [type="text"],
+label [type="url"],
+label [type="number"],
+label [type="email"],
+label [type="tel"],
 label select {
   -webkit-appearance: none;
   appearance: none;
@@ -1079,12 +1083,19 @@ label select {
   padding: 0.5rem 0;
 }
 
-/* line 47 : D:\github\title-belt\stylus\_form.styl */
+/* line 69 : D:\github\title-belt\stylus\_form.styl */
 
-/* line 48 : D:\github\title-belt\stylus\_form.styl */
+/* line 70 : D:\github\title-belt\stylus\_form.styl */
 select option {
   min-height: 1rem;
   line-height: 1.5rem;
+}
+
+/* line 75 : D:\github\title-belt\stylus\_form.styl */
+
+/* line 76 : D:\github\title-belt\stylus\_form.styl */
+.col > label {
+  display: block;
 }
 
 /* line 14 : D:\github\title-belt\tests\stylus\_test.styl */
@@ -1197,9 +1208,11 @@ form .h6,
   border-bottom: 0;
   border-right: 0;
   background-color: #eee;
+  margin: 0;
+  font-size: 1rem;
 }
 
-/* line 93 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 95 : D:\github\title-belt\tests\stylus\_test.styl */
 form button,
 .form button,
 form .button,
@@ -1213,75 +1226,83 @@ form [type="reset"],
   text-align: center;
 }
 
-/* line 100 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 102 : D:\github\title-belt\tests\stylus\_test.styl */
 form [type="reset"],
 .form [type="reset"] {
   opacity: 0.5;
   transition: opacity 0.2s linear;
 }
 
-/* line 104 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 106 : D:\github\title-belt\tests\stylus\_test.styl */
 form [type="reset"]:hover,
 .form [type="reset"]:hover {
   opacity: 1;
 }
 
-/* line 107 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 110 : D:\github\title-belt\tests\stylus\_test.styl */
 label {
   border: 1px solid buttonface;
   border-right: 0;
   border-bottom: 0;
 }
 
-/* line 113 : D:\github\title-belt\tests\stylus\_test.styl */
-label input,
+/* line 116 : D:\github\title-belt\tests\stylus\_test.styl */
+label [type="text"],
+label [type="url"],
+label [type="number"],
+label [type="email"],
+label [type="tel"],
 label select {
   border: 0;
   border-bottom: 1px solid buttonface;
   transition: all 0.2s linear;
 }
 
-/* line 119 : D:\github\title-belt\tests\stylus\_test.styl */
-label input:focus,
+/* line 126 : D:\github\title-belt\tests\stylus\_test.styl */
+label [type="text"]:focus,
+label [type="url"]:focus,
+label [type="number"]:focus,
+label [type="email"]:focus,
+label [type="tel"]:focus,
 label select:focus {
   outline: 0;
   border-bottom-color: #f90;
 }
 
-/* line 126 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 132 : D:\github\title-belt\tests\stylus\_test.styl */
 @media all and (min-width: 0) {
 
-/* line 127 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 133 : D:\github\title-belt\tests\stylus\_test.styl */
 
-/* line 128 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 134 : D:\github\title-belt\tests\stylus\_test.styl */
 
-/* line 129 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 135 : D:\github\title-belt\tests\stylus\_test.styl */
   .demo-dynamic-columns .demo::before {
     content: "mobile: " attr(mobile);
   }
 }
 
-/* line 133 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 139 : D:\github\title-belt\tests\stylus\_test.styl */
 @media all and (min-width: 480px) {
 
-/* line 134 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 140 : D:\github\title-belt\tests\stylus\_test.styl */
 
-/* line 135 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 141 : D:\github\title-belt\tests\stylus\_test.styl */
 
-/* line 136 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 142 : D:\github\title-belt\tests\stylus\_test.styl */
   .demo-dynamic-columns .demo::before {
     content: "tablet: " attr(tablet);
   }
 }
 
-/* line 140 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 146 : D:\github\title-belt\tests\stylus\_test.styl */
 @media all and (min-width: 1024px) {
 
-/* line 141 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 147 : D:\github\title-belt\tests\stylus\_test.styl */
 
-/* line 142 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 148 : D:\github\title-belt\tests\stylus\_test.styl */
 
-/* line 143 : D:\github\title-belt\tests\stylus\_test.styl */
+/* line 149 : D:\github\title-belt\tests\stylus\_test.styl */
   .demo-dynamic-columns .demo::before {
     content: "desktop: " attr(desktop);
   }
