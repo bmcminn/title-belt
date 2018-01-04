@@ -57,7 +57,7 @@ function compileStyles(filepath) {
                 .toLowerCase()
             ;
 
-        let newStyle = path.join(CSS_DIR, filename.replace(/\.[\w\d]+/, '.css'));
+        let newStyle = path.join(CSS_DIR, filename.replace(/\.[\w\d]+/, ''));
 
         let content = fs.read(style);
 
@@ -74,6 +74,8 @@ function compileStyles(filepath) {
                     return;
                 }
 
+                // Write unminified styles to disk
+                fs.write(`${newStyle}.css`, css);
 
                 // POST PROCESS CSS A BIT
                 css = css
@@ -90,7 +92,7 @@ function compileStyles(filepath) {
 
 
                 // console.log(css);
-                fs.write(newStyle, css);
+                fs.write(`${newStyle}.min.css`, css);
 
                 console.log(chalk.green(`> Compiled ${style}`));
             })
