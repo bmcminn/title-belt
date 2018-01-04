@@ -1,37 +1,37 @@
-#__ROOT__ {
-  PP__bp-mobile: 480px;
-  PP__bp-tablet: 768px;
-  PP__bp-lappy: 1024px;
-  PP__bp-desktop: 1440px;
-  PP__bar-height: auto;
-  PP__sidebar-width: 320px;
-  PP__topbar-height: var(--bar-height);
-  PP__footerbar-height: var(--bar-height);
-  PP__webkit-scrollbar-width: 15px;
-  PP__main-container-width: calc(100vw - var(--sidebar-width) - var(--webkit-scrollbar-width));
-  PP__grid-gutter-width: 0.5rem;
-  PP__blue: #0275d8;
-  PP__blue-dark: #025ead;
-  PP__blue-green: #5bc0de;
-  PP__gray-light: #d7d7d7;
-  PP__green: #5cb85c;
-  PP__green-dark: #439a43;
-  PP__yellow: #f0ad4e;
-  PP__yellow-dark: #eb9214;
-  PP__red: #d9534f;
-  PP__red-dark: #c32e2a;
-  PP__border-radius: 3px;
-  PP__border-color: #d7d7d7;
-  PP__primary-color: var(--blue);
-  PP__primary-color-dark: var(--blue-dark);
-  PP__secondary-color: var(--gray-light);
-  PP__info-color: var(--blue-green);
-  PP__success-color: var(--green);
-  PP__success-color-dark: var(--green-dark);
-  PP__warning-color: var(--yellow);
-  PP__warning-color-dark: var(--yellow-dark);
-  PP__danger-color: var(--red);
-  PP__danger-color-dark: var(--red-dark);
+:root {
+  --bp-mobile: 480px;
+  --bp-tablet: 768px;
+  --bp-lappy: 1024px;
+  --bp-desktop: 1440px;
+  --bar-height: auto;
+  --sidebar-width: 320px;
+  --topbar-height: var(--bar-height);
+  --footerbar-height: var(--bar-height);
+  --webkit-scrollbar-width: 15px;
+  --main-container-width: calc(100vw - var(--sidebar-width) - var(--webkit-scrollbar-width));
+  --grid-gutter-width: 0.5rem;
+  --blue: #0275d8;
+  --blue-dark: #025ead;
+  --blue-green: #5bc0de;
+  --gray-light: #d7d7d7;
+  --green: #5cb85c;
+  --green-dark: #439a43;
+  --yellow: #f0ad4e;
+  --yellow-dark: #eb9214;
+  --red: #d9534f;
+  --red-dark: #c32e2a;
+  --border-radius: 3px;
+  --border-color: #d7d7d7;
+  --primary-color: var(--blue);
+  --primary-color-dark: var(--blue-dark);
+  --secondary-color: var(--gray-light);
+  --info-color: var(--blue-green);
+  --success-color: var(--green);
+  --success-color-dark: var(--green-dark);
+  --warning-color: var(--yellow);
+  --warning-color-dark: var(--yellow-dark);
+  --danger-color: var(--red);
+  --danger-color-dark: var(--red-dark);
 }
 html {
   box-sizing: border-box;
@@ -262,7 +262,7 @@ small {
   display: inline-block;
   padding: var(--grid-gutter-width);
 }
-@media (min-width: 480px) {
+@media (min-width: 0) {
   .grid > [mobile="1-2"] {
     width: 50%;
   }
@@ -300,6 +300,47 @@ small {
     width: 66.66668%;
   }
   .grid > [mobile="5-6"] {
+    width: 83.33335%;
+  }
+}
+@media (min-width: 480px) {
+  .grid > [mobile-l="1-2"] {
+    width: 50%;
+  }
+  .grid > [mobile-l="1-3"] {
+    width: 33.33333%;
+  }
+  .grid > [mobile-l="2-3"] {
+    width: 66.66666%;
+  }
+  .grid > [mobile-l="1-4"] {
+    width: 25%;
+  }
+  .grid > [mobile-l="3-4"] {
+    width: 75%;
+  }
+  .grid > [mobile-l="1-5"] {
+    width: 20%;
+  }
+  .grid > [mobile-l="2-5"] {
+    width: 40%;
+  }
+  .grid > [mobile-l="3-5"] {
+    width: 60%;
+  }
+  .grid > [mobile-l="4-5"] {
+    width: 80%;
+  }
+  .grid > [mobile-l="1-6"] {
+    width: 16.66667%;
+  }
+  .grid > [mobile-l="2-6"] {
+    width: 33.33334%;
+  }
+  .grid > [mobile-l="4-6"] {
+    width: 66.66668%;
+  }
+  .grid > [mobile-l="5-6"] {
     width: 83.33335%;
   }
 }

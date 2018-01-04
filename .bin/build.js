@@ -74,14 +74,15 @@ function compileStyles(filepath) {
                     return;
                 }
 
-                // Write unminified styles to disk
-                fs.write(`${newStyle}.css`, css);
-
                 // POST PROCESS CSS A BIT
                 css = css
                     .replace(/#__ROOT__/gi, ':root')
                     .replace(/PP__/gi, '--')
                     ;
+
+                // Write unminified styles to disk
+                fs.write(`${newStyle}.css`, css);
+
 
                 let csso_opts = {
                     debug:  process.env.NODE_ENV ? false : true

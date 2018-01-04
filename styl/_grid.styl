@@ -24,8 +24,17 @@ $grid-gutter-width = round(1rem / 2, $rounding-precision)
 
 
 
-mq_grid($TITLE, $BP)
-    @media (min-width: $BP)
+mq_grid($TITLE, $BP_MIN, $BP_MAX=0)
+    // @media (max-width: $BP_MAX)
+    //     .show-{$TITLE}
+    //         display: none
+
+    @media (min-width: $BP_MIN)
+
+        // // TODO: this suffers from lack of context regarding the initial display mode
+        // .show-{$TITLE}
+        //     display: inline-block
+
         .grid >
             [{$TITLE}="1-2"]
                 width: 50%
@@ -74,7 +83,8 @@ mq_grid($TITLE, $BP)
 // =============================================
 //  SETUP GRID MODIFIERS
 // =============================================
-mq_grid("mobile",  $bp-mobile)
-mq_grid("tablet",  $bp-tablet)
-mq_grid("lappy",   $bp-lappy)
-mq_grid("desktop", $bp-desktop)
+mq_grid("mobile",   0,              $bp-mobile)
+mq_grid("mobile-l", $bp-mobile,     $bp-tablet)
+mq_grid("tablet",   $bp-tablet,     $bp-lappy)
+mq_grid("lappy",    $bp-lappy,      $bp-desktop)
+mq_grid("desktop",  $bp-desktop)
