@@ -38,13 +38,20 @@ form.card
 
 
 input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
-select
+select,
+textarea
     padding: $component-padding
     border: 1px solid $border-color
     border-radius: $border-radius
     width: 100%
     margin: 0.5rem 0
 
+textarea
+    min-width: 100%
+    max-width: 100%
+    min-height: var(--textarea-min-height)
+    max-height: var(--textarea-max-height)
+    font-family: inherit
 
 select
     padding: 0.44rem 0.8rem

@@ -2,11 +2,13 @@
 
 
 #__ROOT__ {
-    // BREAKPOINTS
-    PP__bp-mobile:    $bp-mobile
-    PP__bp-tablet:    $bp-tablet
-    PP__bp-lappy:     $bp-lappy
-    PP__bp-desktop:   $bp-desktop
+    // NOTE: cannot use CSS custom properties in @media queries *eyeroll
+    //  -- https://stackoverflow.com/questions/40722882/css-native-variables-not-working-in-media-queries
+    // // BREAKPOINTS
+    // PP__bp-mobile:    $bp-mobile
+    // PP__bp-tablet:    $bp-tablet
+    // PP__bp-lappy:     $bp-lappy
+    // PP__bp-desktop:   $bp-desktop
 
     // LAYOUT DIMENSIONS
     PP__bar-height:               auto
@@ -16,6 +18,8 @@
     PP__webkit-scrollbar-width:   15px
     PP__main-container-width:     calc(100vw - var(--sidebar-width) - var(--webkit-scrollbar-width))
     PP__grid-gutter-width:        0.5rem
+    PP__textarea-min-height:      8rem
+    PP__textarea-max-height:      30rem
 
     // UI COLOR PALETTE
     PP__blue:                     $blue

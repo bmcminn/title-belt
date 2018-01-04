@@ -1,8 +1,4 @@
 :root {
-  --bp-mobile: 480px;
-  --bp-tablet: 768px;
-  --bp-lappy: 1024px;
-  --bp-desktop: 1440px;
   --bar-height: auto;
   --sidebar-width: 320px;
   --topbar-height: var(--bar-height);
@@ -10,6 +6,8 @@
   --webkit-scrollbar-width: 15px;
   --main-container-width: calc(100vw - var(--sidebar-width) - var(--webkit-scrollbar-width));
   --grid-gutter-width: 0.5rem;
+  --textarea-min-height: 8rem;
+  --textarea-max-height: 30rem;
   --blue: #0275d8;
   --blue-dark: #025ead;
   --blue-green: #5bc0de;
@@ -748,12 +746,20 @@ form.card {
   padding: 0;
 }
 input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
-select {
+select,
+textarea {
   padding: 0.5rem 0.8rem;
   border: 1px solid #d7d7d7;
   border-radius: 3px;
   width: 100%;
   margin: 0.5rem 0;
+}
+textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: var(--textarea-min-height);
+  max-height: var(--textarea-max-height);
+  font-family: inherit;
 }
 select {
   padding: 0.44rem 0.8rem;
