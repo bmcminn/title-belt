@@ -5,10 +5,10 @@
 			"path": ".",
       "folder_exclude_patterns": [
         "node_modules",
-        "bower_components",
         "__*"
       ],
       "file_exclude_patterns": [
+        "*.lock"
       ]
 		}
 	]

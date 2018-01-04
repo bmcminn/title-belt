@@ -1,0 +1,95 @@
+@import "_variables"
+
+
+#__ROOT__ {
+    // BREAKPOINTS
+    PP__bp-mobile:    $bp-mobile
+    PP__bp-tablet:    $bp-tablet
+    PP__bp-lappy:     $bp-lappy
+    PP__bp-desktop:   $bp-desktop
+
+    // LAYOUT DIMENSIONS
+    PP__bar-height:               auto
+    PP__sidebar-width:            320px
+    PP__topbar-height:            var(--bar-height)
+    PP__footerbar-height:         var(--bar-height)
+    PP__webkit-scrollbar-width:   15px
+    PP__main-container-width:     calc(100vw - var(--sidebar-width) - var(--webkit-scrollbar-width))
+    PP__grid-gutter-width:        0.5rem
+
+    // UI COLOR PALETTE
+    PP__blue:                     $blue
+    PP__blue-dark:                $blue-dark
+    PP__blue-green:               $blue-green
+    PP__gray-light:               $gray-light
+    PP__green:                    $green
+    PP__green-dark:               $green-dark
+    PP__yellow:                   $yellow
+    PP__yellow-dark:              $yellow-dark
+    PP__red:                      $red
+    PP__red-dark:                 $red-dark
+
+
+    // COMPONENT DIMENSIONS
+    PP__border-radius:            $border-radius
+
+    // COMPONENT COLORS
+    PP__border-color:             $gray-light
+
+    PP__primary-color:            var(--blue)
+    PP__primary-color-dark:       var(--blue-dark)
+    PP__secondary-color:          var(--gray-light)
+    PP__info-color:               var(--blue-green)
+    PP__success-color:            var(--green)
+    PP__success-color-dark:       var(--green-dark)
+    PP__warning-color:            var(--yellow)
+    PP__warning-color-dark:       var(--yellow-dark)
+    PP__danger-color:             var(--red)
+    PP__danger-color-dark:        var(--red-dark)
+}
+
+
+
+@import "_reset"
+@import "_mixins"
+
+@import "_app-layout"
+
+@import "_grid"
+
+@import "_tables"
+@import "_buttons"
+@import "_forms"
+
+@import "_content-modules"
+
+
+.text-left
+    text-align: left
+.text-center
+    text-align: center
+.text-right
+    text-align: right
+
+.text-muted
+    opacity: 0.5
+
+$content-margin = $grid-gutter-width
+
+.content
+    h1, h2, h3,
+    .h1, .h2, .h3
+        margin: $content-margin 0
+        font-weight: bold
+
+    h1, .h1
+        font-size: 1.6rem
+
+    h2, .h2
+        font-size: 1.3rem
+
+    p
+        margin: $content-margin 0
+
+
+@import "_print"

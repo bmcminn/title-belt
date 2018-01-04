@@ -1,0 +1,99 @@
+
+// .form-group
+//     width: 100%
+
+// .form-group + .form-group
+//     margin-top: 0.5rem
+
+
+$form-gutter = 1rem
+$form-group-padding = ($form-gutter * 0.25) $form-gutter
+$disabled-opacity = 0.6
+
+// TODO: define a better intrinsic ratio to better subdivide the input gutters
+
+form
+    font-size: 0
+    padding: 1rem 0.5rem
+
+form.card
+    padding: 1rem 0.5rem
+
+.form-group, .form-check, .form-file
+    width: 100%
+
+    display: inline-block
+    // width: 'calc(100% + %s)' % ($form-gutter * 0)
+    font-size: initial
+    padding: 0.25rem 0.5rem
+    position: relative;
+
+    label, .label
+        text-indent: 0.1rem
+        display: block
+
+    &.row
+        margin: 0
+        padding: 0
+
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+select
+    padding: $component-padding
+    border: 1px solid $border-color
+    border-radius: $border-radius
+    width: 100%
+    margin: 0.5rem 0
+
+
+select
+    padding: 0.44rem 0.8rem
+    background-color: $white
+
+
+input[type="file"]
+    padding: 0.5rem 0.5rem 5rem
+    border: 1px solid $border-color
+    border-radius: $border-radius
+    width: 100%
+    margin: 0.5rem 0
+    position: relative
+    overflow: hidden
+
+    // // TODO: background image of image icon: needs to be non-pseudo element based because FF
+
+
+[disabled]
+    opacity: $disabled-opacity
+    background-color: $disabled-bg-color
+
+.disabled,
+[disabled],
+[disabled] + label
+    cursor: not-allowed !important
+
+
+.form-check
+    input[type="checkbox"]
+        -webkit-appearance: checkbox
+        display: inline-block
+        vertical-align: baseline
+        font-size: initial
+
+    input[type="checkbox"],
+    input[type="radio"]
+        &[disabled] + label
+            opacity: ($disabled-opacity * 0.5)
+
+    label
+        display: inline-block
+        font-size: initial
+
+
+    label + input
+        margin-left: 1rem
+
+
+
+input[type="reset"]
+    background-color: $gray-light
