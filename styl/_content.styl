@@ -1,0 +1,40 @@
+.text-left
+    text-align: left
+.text-center
+    text-align: center
+.text-right
+    text-align: right
+
+.text-muted
+    opacity: 0.5
+
+$content-margin = $grid-gutter-width
+
+.content
+    h1, h2, h3,
+    .h1, .h2, .h3
+        margin: $content-margin 0
+        font-weight: bold
+
+    h1, .h1
+        font-size: 1.6rem
+
+    h2, .h2
+        font-size: 1.3rem
+
+        &:after
+            content: ''
+            display: block
+            width: 100%
+            margin-top: 0.5rem
+            border-bottom: 1px solid $border-color
+
+    p
+        margin: $content-margin 0
+
+pre
+    padding: 1rem
+    // border: 1px solid $border-color
+    color: $white
+    background-color: lighten($black, 20%)
+    border-radius: $border-radius

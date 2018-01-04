@@ -4,8 +4,16 @@ $zz     = ($z * 10)
 $zzz    = ($zz * 10)
 $zzzz   = ($zzz * 10)
 
+
+$sidebar-width      = 320px
+$topbar-height      = 60px
+
+$scrollbar-width    = 15px
+
+
+
 .app-sidebar
-    width: var(--sidebar-width)
+    width: $sidebar-width
     position: fixed
     z-index: $zzzz
     height: 100vh
@@ -33,12 +41,12 @@ $zzzz   = ($zzz * 10)
 #main-nav-toggle
     position: absolute
     right: -60px
-    top: calc(var(--topbar-height)/4)
+    top: "calc(%s / 4)" % $topbar-height
 
 
 .app-main-container
     position: relative
-    padding-top: var(--topbar-height)
+    padding-top: $topbar-height
     z-index: $zz
     transition: opacity ease 0.3s
     margin-left: auto
@@ -49,32 +57,31 @@ $zzzz   = ($zzz * 10)
     position: fixed
     z-index: $zzz
     top: 0
-    height: var(--topbar-height)
+    height: $topbar-height
     width: 100%
     background-color: $app-topbar-bg-color
     border-bottom: 1px solid $border-color
 
 
 
-@media (min-width: 1024px)
+@media (min-width: $bp-lappy)
     .app-sidebar
         left: 0
         transform: none
         transition: none
-
 
     #main-nav-toggle
         display: none
 
 
     // NOTE: context hiccup, scroll bar does some gnarly stuff on windows where scrollbar width is not factored into the calc of 100vw
-    .touch
-        .app-top-bar,
-        .app-main-container
-            width: calc(var(--main-container-width) + var(--webkit-scrollbar-width))
+    // .touch
+    //     .app-top-bar,
+    //     .app-main-container
+    //         width: "calc(100vw - %s)" % $scrollbar-width
 
     .app-main-container,
     .app-top-bar
-        width: var(--main-container-width)
+        width: "calc(100vw - %s - %s)" % ($sidebar-width $scrollbar-width)
 
 

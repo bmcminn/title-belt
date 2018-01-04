@@ -1,0 +1,26 @@
+$active-color = $red
+
+$app-nav-link-color = $black
+
+
+$transition = 0.3s ease
+
+.app-nav-link
+    a:link
+        color: $app-nav-link-color
+        display: block
+        padding: 1rem
+        border-left: 0.5rem solid transparent
+        text-decoration: none
+        transition: all $transition
+
+    a:hover
+        color: $active-color
+        border-left-color: $active-color
+        background-color: rgba(0,0,0,.1)
+        font-weight: bold
+
+
+    .active
+        border-left-color: $active-color
+

@@ -9,27 +9,19 @@
   --textarea-min-height: 8rem;
   --textarea-max-height: 30rem;
   --blue: #0275d8;
-  --blue-dark: #025ead;
   --blue-green: #5bc0de;
   --gray-light: #d7d7d7;
   --green: #5cb85c;
-  --green-dark: #439a43;
   --yellow: #f0ad4e;
-  --yellow-dark: #eb9214;
   --red: #d9534f;
-  --red-dark: #c32e2a;
   --border-radius: 3px;
   --border-color: #d7d7d7;
   --primary-color: var(--blue);
-  --primary-color-dark: var(--blue-dark);
   --secondary-color: var(--gray-light);
   --info-color: var(--blue-green);
   --success-color: var(--green);
-  --success-color-dark: var(--green-dark);
   --warning-color: var(--yellow);
-  --warning-color-dark: var(--yellow-dark);
   --danger-color: var(--red);
-  --danger-color-dark: var(--red-dark);
 }
 html {
   box-sizing: border-box;
@@ -179,7 +171,7 @@ small {
   font-size: 80%;
 }
 .app-sidebar {
-  width: var(--sidebar-width);
+  width: 320px;
   position: fixed;
   z-index: 10000;
   height: 100vh;
@@ -207,11 +199,11 @@ small {
 #main-nav-toggle {
   position: absolute;
   right: -60px;
-  top: calc(var(--topbar-height) / 4);
+  top: calc(60px / 4);
 }
 .app-main-container {
   position: relative;
-  padding-top: var(--topbar-height);
+  padding-top: 60px;
   z-index: 100;
   transition: opacity ease 0.3s;
   margin-left: auto;
@@ -221,7 +213,7 @@ small {
   position: fixed;
   z-index: 1000;
   top: 0;
-  height: var(--topbar-height);
+  height: 60px;
   width: 100%;
   background-color: #fff;
   border-bottom: 1px solid #d7d7d7;
@@ -235,14 +227,27 @@ small {
   #main-nav-toggle {
     display: none;
   }
-  .touch .app-top-bar,
-  .touch .app-main-container {
-    width: calc(var(--main-container-width) + var(--webkit-scrollbar-width));
-  }
   .app-main-container,
   .app-top-bar {
-    width: var(--main-container-width);
+    width: calc(100vw - 320px - 15px);
   }
+}
+.app-nav-link a:link {
+  color: #363636;
+  display: block;
+  padding: 1rem;
+  border-left: 0.5rem solid transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.app-nav-link a:hover {
+  color: #d9534f;
+  border-left-color: #d9534f;
+  background-color: rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+.app-nav-link .active {
+  border-left-color: #d9534f;
 }
 .grid {
   font-size: 0;
@@ -837,8 +842,22 @@ input[type="reset"] {
 .content .h2 {
   font-size: 1.3rem;
 }
+.content h2:after,
+.content .h2:after {
+  content: '';
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  border-bottom: 1px solid #d7d7d7;
+}
 .content p {
   margin: 0.5rem 0;
+}
+pre {
+  padding: 1rem;
+  color: #fff;
+  background-color: #5e5e5e;
+  border-radius: 3px;
 }
 @media print {
   .app-sidebar {
