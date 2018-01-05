@@ -12,16 +12,43 @@ $scrollbar-width    = 15px
 
 
 
+.app-main-container
+    position: relative
+    z-index: $zz
+
+    margin-right: 0
+    margin-left: auto
+    padding-top: $topbar-height
+
+    transition: opacity ease .3s
+
+
+.app-top-bar
+    position: fixed
+    z-index: $zzz
+    top: 0
+
+    width: 100%
+    height: $topbar-height
+
+    border-bottom: 1px solid $border-color
+    background-color: $app-topbar-bg-color
+
+
 .app-sidebar
-    width: $sidebar-width
     position: fixed
     z-index: $zzzz
-    height: 100vh
+    top: 0
     left: 0
+
+    width: $sidebar-width
+    height: 100vh
+
+    transition: transform ease .3s
+    transform: translate(-100%, 0)
+
     border-right: 1px solid $border-color
     background-color: $white
-    transform: translate(-100%, 0)
-    transition: transform ease 0.3s
 
     &.open
         transform: translate(0,0)
@@ -32,36 +59,16 @@ $scrollbar-width    = 15px
             i:before
                 content: "\f00d"
 
-
-@media (max-width: ($bp-lappy - 1))
-    .app-sidebar.open + .app-main-container
-        opacity: 0.3
-        filter: blur(2px);
-
 #main-nav-toggle
     position: absolute
     right: -60px
     top: "calc(%s / 4)" % $topbar-height
 
 
-.app-main-container
-    position: relative
-    padding-top: $topbar-height
-    z-index: $zz
-    transition: opacity ease 0.3s
-    margin-left: auto
-    margin-right: 0
-
-
-.app-top-bar
-    position: fixed
-    z-index: $zzz
-    top: 0
-    height: $topbar-height
-    width: 100%
-    background-color: $app-topbar-bg-color
-    border-bottom: 1px solid $border-color
-
+@media (max-width: ($bp-lappy - 1))
+    .app-sidebar.open + .app-main-container
+        opacity: 0.3
+        filter: blur(2px)
 
 
 @media (min-width: $bp-lappy)

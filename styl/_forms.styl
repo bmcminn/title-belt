@@ -8,9 +8,12 @@
 
 $form-gutter = 1rem
 $form-group-padding = ($form-gutter * 0.25) $form-gutter
-$disabled-opacity = 0.6
+$disabled-opacity = 0.5
 
-// TODO: define a better intrinsic ratio to better subdivide the input gutters
+
+// ==================================================
+// BASE FORM CONTAINER STYLES
+// ==================================================
 
 form
     font-size: 0
@@ -18,6 +21,12 @@ form
 
 form.card
     padding: 1rem 0.5rem
+
+
+
+// ==================================================
+// FORM CONTROL GROUP STYLES
+// ==================================================
 
 .form-group, .form-check, .form-file
     width: 100%
@@ -37,6 +46,11 @@ form.card
         padding: 0
 
 
+
+// ==================================================
+// TEXT BASED INPUT STYLES
+// ==================================================
+
 input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
 select,
 textarea
@@ -53,12 +67,23 @@ textarea
     max-height: var(--textarea-max-height)
     font-family: inherit
 
+
+
+// ==================================================
+// SELECT STYLES
+// ==================================================
+
 select
     padding: 0.44rem 0.8rem
     background-color: $white
 
 
-input[type="file"]
+
+// ==================================================
+// FILE INPUT STYLES
+// ==================================================
+
+[type="file"]
     padding: 0.5rem 0.5rem 5rem
     border: 1px solid $border-color
     border-radius: $border-radius
@@ -70,6 +95,11 @@ input[type="file"]
     // // TODO: background image of image icon: needs to be non-pseudo element based because FF
 
 
+
+// ==================================================
+// DISABLED STYLES
+// ==================================================
+
 [disabled]
     opacity: $disabled-opacity
     background-color: $disabled-bg-color
@@ -78,19 +108,20 @@ input[type="file"]
 [disabled],
 [disabled] + label
     cursor: not-allowed !important
+    opacity: $disabled-opacity
 
+
+
+// ==================================================
+// CHECKBOX/RADIO STYLES
+// ==================================================
 
 .form-check
-    input[type="checkbox"]
+    [type="checkbox"]
         -webkit-appearance: checkbox
         display: inline-block
         vertical-align: baseline
         font-size: initial
-
-    input[type="checkbox"],
-    input[type="radio"]
-        &[disabled] + label
-            opacity: ($disabled-opacity * 0.5)
 
     label
         display: inline-block
@@ -102,5 +133,37 @@ input[type="file"]
 
 
 
-input[type="reset"]
-    background-color: $gray-light
+// ==================================================
+// INPUT GROUP STYLES
+// ==================================================
+
+// NOTE: do not nest multiple input fields in an .input-group
+// NOTE: do not use a checkbox or radio element in an .input-group
+
+.input-group
+    display: flex
+    border-radius: $border-radius
+    border: 1px solid $border-color
+    margin: 0.5rem 0
+    overflow: hidden
+
+    > *:not(button)
+        display: flex
+        align-items: center
+        height: auto
+        padding: 0 1rem
+        line-height: 0
+        font-size: 85%
+        background-color: lighten($gray-light, 60%)
+
+    // TODO: figure out how to make this less sucky
+    input, button
+        border: 0 !important
+        border-radius: 0 !important
+        border-color: none
+
+    input
+        margin: 0 !important
+        background-color: $white
+
+
