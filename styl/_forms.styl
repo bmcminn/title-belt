@@ -3,29 +3,37 @@
 //     width: 100%
 
 // .form-group + .form-group
-//     margin-top: 0.5rem
+//     margin-top: $mt
 
 
-$form-gutter = 1rem
-$form-group-padding = ($form-gutter * 0.25) $form-gutter
-$disabled-opacity = 0.6
+$form-gutter        = 1rem unless $ml
+// $form-group-padding = ($form-gutter * 0.25) $form-gutter
 
-// TODO: define a better intrinsic ratio to better subdivide the input gutters
+$disabled-opacity   = 0.5
+
+
+// ==================================================
+// BASE FORM CONTAINER STYLES
+// ==================================================
 
 form
     font-size: 0
-    padding: 1rem 0.5rem
+    padding: ($mt*2) $mt
 
 form.card
-    padding: 1rem 0.5rem
+    padding: ($mt*2) $mt
+
+
+
+// ==================================================
+// FORM CONTROL GROUP STYLES
+// ==================================================
 
 .form-group, .form-check, .form-file
     width: 100%
-
     display: inline-block
-    // width: 'calc(100% + %s)' % ($form-gutter * 0)
     font-size: initial
-    padding: 0.25rem 0.5rem
+    padding: 0.25rem $mt
     position: relative;
 
     label, .label
@@ -37,31 +45,59 @@ form.card
         padding: 0
 
 
+
+// ==================================================
+// TEXT BASED INPUT STYLES
+// ==================================================
+
 input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
-select
+select,
+textarea
     padding: $component-padding
     border: 1px solid $border-color
     border-radius: $border-radius
     width: 100%
-    margin: 0.5rem 0
+    margin: $mt 0
 
+textarea
+    min-width: 100%
+    max-width: 100%
+    min-height: var(--textarea-min-height)
+    max-height: var(--textarea-max-height)
+    font-family: inherit
+
+
+
+// ==================================================
+// SELECT STYLES
+// ==================================================
 
 select
     padding: 0.44rem 0.8rem
     background-color: $white
 
 
-input[type="file"]
-    padding: 0.5rem 0.5rem 5rem
+
+// ==================================================
+// FILE INPUT STYLES
+// ==================================================
+
+[type="file"]
+    padding: $mt $mt 5rem
     border: 1px solid $border-color
     border-radius: $border-radius
     width: 100%
-    margin: 0.5rem 0
+    margin: $mt 0
     position: relative
     overflow: hidden
 
     // // TODO: background image of image icon: needs to be non-pseudo element based because FF
 
+
+
+// ==================================================
+// DISABLED STYLES
+// ==================================================
 
 [disabled]
     opacity: $disabled-opacity
@@ -71,19 +107,20 @@ input[type="file"]
 [disabled],
 [disabled] + label
     cursor: not-allowed !important
+    opacity: $disabled-opacity
 
+
+
+// ==================================================
+// CHECKBOX/RADIO STYLES
+// ==================================================
 
 .form-check
-    input[type="checkbox"]
+    [type="checkbox"]
         -webkit-appearance: checkbox
         display: inline-block
         vertical-align: baseline
         font-size: initial
-
-    input[type="checkbox"],
-    input[type="radio"]
-        &[disabled] + label
-            opacity: ($disabled-opacity * 0.5)
 
     label
         display: inline-block
@@ -95,5 +132,37 @@ input[type="file"]
 
 
 
-input[type="reset"]
-    background-color: $gray-light
+// ==================================================
+// INPUT GROUP STYLES
+// ==================================================
+
+// NOTE: do not nest multiple input fields in an .input-group
+// NOTE: do not use a checkbox or radio element in an .input-group
+
+.input-group
+    display: flex
+    border-radius: $border-radius
+    border: 1px solid $border-color
+    margin: $mt 0
+    overflow: hidden
+
+    > *:not(button)
+        display: flex
+        align-items: center
+        height: auto
+        padding: 0 1rem
+        line-height: 0
+        font-size: 85%
+        background-color: lighten($gray-light, 60%)
+
+    // TODO: figure out how to make this less sucky
+    input, button
+        border: 0 !important
+        border-radius: 0 !important
+        border-color: none
+
+    input
+        margin: 0 !important
+        background-color: $white
+
+

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></style>
-    <link rel="stylesheet" href="/dist/css/main.min.css">
+    <link rel="stylesheet" href="/dist/main.min.css">
 
 
     <style>
@@ -22,32 +22,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 <body>
-
-    <div class="app-sidebar" id="main-nav">
-
-        <button class="btn btn-primary" id="main-nav-toggle"><i class="fa fa-bars"></i></button>
-
-        <header>
-            App Logo Here
-        </header>
-
-        <nav class="app-navbar" role="navigation">
-            <ul>
-                <li><a href="/FESJKLFE">Test</a></li>
-                <li><a href="/FESJKLFE">Test</a></li>
-                <li><a href="/FESJKLFE">Test</a></li>
-                <li><a href="/FESJKLFE">Test</a></li>
-                <li><a href="/FESJKLFE">Test</a></li>
-            </ul>
-        </nav>
-
-        <footer class="text-center">
-            &copy; 2017 Brandtley McMinn.<br>
-            <a href="https://github.com/bmcminn" title="Brandtley's Github"><i class="fa fa-github"></i></a>
-            <a href="https://twitter.com/brandtleymcminn" title="Brandtley's Twitter"><i class="fa fa-twitter"></i></a>
-            <a href="https://dribbble.com/brandtleymcminn" title="Brandtley's Dribbble"><i class="fa fa-dribbble"></i></a>
-        </footer>
-    </div>
 
     <div class="app-main-container">
 
@@ -70,10 +44,14 @@
                     <div class="grid">
                         <div class="demo-col"><code>(default)</code></div>
 
+                        <div class="demo-col show-tablet" tablet="1-2"><code>1-2</code></div>
+                        <div class="demo-col show-tablet" tablet="1-2"><code>1-2</code></div>
+                        <!--
                         <div class="demo-col show-mobile" mobile="1-2"><code>mobile 1-2</code></div>
                         <div class="demo-col show-mobile" mobile="1-2"><code>mobile 1-2</code></div>
                         <div class="demo-col show-tablet" tablet="1-2"><code>tablet 1-2</code></div>
                         <div class="demo-col show-tablet" tablet="1-2"><code>tablet 1-2</code></div>
+                         -->
 
                         <div class="demo-col" tablet="1-3"><code>1-3</code></div>
                         <div class="demo-col" tablet="1-3"><code>1-3</code></div>
@@ -96,6 +74,12 @@
                         <div class="demo-col" tablet="1-6"><code>1-6</code></div>
                         <div class="demo-col" tablet="1-6"><code>1-6</code></div>
                         <div class="demo-col" tablet="1-6"><code>1-6</code></div>
+
+                        <h3>Sample grid code</h3>
+
+                        <div>
+                            <pre><code>&lt;div class="grid"><br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div tablet="1-2" lappy="1-3" desktop="1-4">Content goes here&lt;/div> <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div tablet="1-2" lappy="1-3" desktop="1-4">Content goes here&lt;/div> <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div tablet="1-2" lappy="1-3" desktop="1-4">Content goes here&lt;/div> <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div tablet="1-2" lappy="1-3" desktop="1-4">Content goes here&lt;/div> <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div tablet="1-2" lappy="1-3" desktop="1-4">Content goes here&lt;/div> <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div tablet="1-2" lappy="1-3" desktop="1-4">Content goes here&lt;/div><br>&lt;/div></code></pre>
+                        </div>
                     </div>
 
 
@@ -166,40 +150,65 @@
 
                 <section>
                     <h2>Button Styles</h2>
-                    <button class="btn btn-primary">Default</button>
-                    <button class="btn btn-secondary">Secondary</button>
-                    <button class="btn btn-info">Info</button>
-                    <button class="btn btn-success">Success</button>
-                    <button class="btn btn-warning">Warn</button>
-                    <button class="btn btn-danger">Danger</button>
+                    <button class="btn-primary">Default</button>
+                    <button class="btn-secondary">Secondary</button>
+                    <button class="btn-info">Info</button>
+                    <button class="btn-success">Success</button>
+                    <button class="btn-warning">Warn</button>
+                    <button class="btn-danger">Danger</button>
 
-                    <h2>Button Outline Styles</h2>
-                    <button class="btn btn-primary-outline">Default</button>
-                    <button class="btn btn-secondary-outline">Secondary</button>
-                    <button class="btn btn-info-outline">Info</button>
-                    <button class="btn btn-success-outline">Success</button>
-                    <button class="btn btn-warning-outline">Warn</button>
-                    <button class="btn btn-danger-outline">Danger</button>
+                    <h3>Button Outline Styles</h3>
+                    <button class="btn-primary-outline">Default</button>
+                    <button class="btn-secondary-outline">Secondary</button>
+                    <button class="btn-info-outline">Info</button>
+                    <button class="btn-success-outline">Success</button>
+                    <button class="btn-warning-outline">Warn</button>
+                    <button class="btn-danger-outline">Danger</button>
 
-                    <h2>Buttons With Icons</h2>
-                    <button class="btn btn-primary"><i class="fa fa-user"></i> Default</button>
-                    <button class="btn btn-secondary"><i class="fa fa-user"></i> Secondary</button>
-                    <button class="btn btn-info"><i class="fa fa-user"></i> Info</button>
-                    <button class="btn btn-success"><i class="fa fa-user"></i> Success</button>
-                    <button class="btn btn-warning"><i class="fa fa-user"></i> Warn</button>
-                    <button class="btn btn-danger"><i class="fa fa-user"></i> Danger</button>
+                    <h3>Buttons With Icons</h3>
+                    <button class="btn-primary"><i class="fa fa-user"></i> Default</button>
+                    <button class="btn-secondary"><i class="fa fa-user"></i> Secondary</button>
+                    <button class="btn-info"><i class="fa fa-user"></i> Info</button>
+                    <button class="btn-success"><i class="fa fa-user"></i> Success</button>
+                    <button class="btn-warning"><i class="fa fa-user"></i> Warn</button>
+                    <button class="btn-danger"><i class="fa fa-user"></i> Danger</button>
 
-                    <h2>Outlined Buttons With Icons</h2>
-                    <button class="btn btn-primary-outline"><i class="fa fa-user"></i> Default</button>
-                    <button class="btn btn-secondary-outline"><i class="fa fa-user"></i> Secondary</button>
-                    <button class="btn btn-info-outline"><i class="fa fa-user"></i> Info</button>
-                    <button class="btn btn-success-outline"><i class="fa fa-user"></i> Success</button>
-                    <button class="btn btn-warning-outline"><i class="fa fa-user"></i> Warn</button>
-                    <button class="btn btn-danger-outline"><i class="fa fa-user"></i> Danger</button>
+                    <h3>Outlined Buttons With Icons</h3>
+                    <button class="btn-primary-outline"><i class="fa fa-user"></i> Default</button>
+                    <button class="btn-secondary-outline"><i class="fa fa-user"></i> Secondary</button>
+                    <button class="btn-info-outline"><i class="fa fa-user"></i> Info</button>
+                    <button class="btn-success-outline"><i class="fa fa-user"></i> Success</button>
+                    <button class="btn-warning-outline"><i class="fa fa-user"></i> Warn</button>
+                    <button class="btn-danger-outline"><i class="fa fa-user"></i> Danger</button>
 
-                    <h2>Block Buttons</h2>
-                    <button class="btn btn-block btn-primary"><i class="fa fa-user"></i> Default</button>
-                    <button class="btn btn-block btn-primary-outline"><i class="fa fa-user"></i> Default</button>
+                    <h3>Disabled Buttons</h3>
+                    <button disabled class="btn-primary"><i class="fa fa-user"></i> Default</button>
+                    <button disabled class="btn-secondary"><i class="fa fa-user"></i> Secondary</button>
+                    <button disabled class="btn-info"><i class="fa fa-user"></i> Info</button>
+                    <button disabled class="btn-success"><i class="fa fa-user"></i> Success</button>
+                    <button disabled class="btn-warning"><i class="fa fa-user"></i> Warn</button>
+                    <button disabled class="btn-danger"><i class="fa fa-user"></i> Danger</button>
+
+                    <br>
+
+                    <button disabled class="btn-primary-outline"><i class="fa fa-user"></i> Default</button>
+                    <button disabled class="btn-secondary-outline"><i class="fa fa-user"></i> Secondary</button>
+                    <button disabled class="btn-info-outline"><i class="fa fa-user"></i> Info</button>
+                    <button disabled class="btn-success-outline"><i class="fa fa-user"></i> Success</button>
+                    <button disabled class="btn-warning-outline"><i class="fa fa-user"></i> Warn</button>
+                    <button disabled class="btn-danger-outline"><i class="fa fa-user"></i> Danger</button>
+
+                    <h3>Block Buttons</h3>
+                    <button class="btn-block btn-primary"><i class="fa fa-user"></i> Default</button>
+                    <button class="btn-block btn-primary-outline"><i class="fa fa-user"></i> Default</button>
+
+
+                    <h3>Sample grid code</h3>
+
+                    <div>
+                        <pre><code>&lt;button class="btn-primary">Button text&lt;/div><br>&lt;button class="btn-secondary">Button text&lt;/div><br>&lt;button class="btn-info">Button text&lt;/div><br>&lt;button class="btn-success">Button text&lt;/div><br>&lt;button class="btn-warning">Button text&lt;/div><br>&lt;button class="btn-danger">Button text&lt;/div></code></pre>
+                    </div>
+
                 </section>
 
 
@@ -208,6 +217,8 @@
 
 
                     <form class="card grid">
+
+                        <h3>Example Login</h3>
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
@@ -227,12 +238,19 @@
                         </div>
 
 
+                        <!-- ======================================== -->
+
+                        <h3>File Uploads</h3>
+
                         <div class="form-file file-misc">
                             <label for="exampleFileUpload3">File upload</label>
                             <input type="file" id="exampleFileUpload3" placeholder="Enter phone number">
                         </div>
 
 
+                        <!-- ======================================== -->
+
+                        <h3>Checkboxes &amp; Radio Buttons</h3>
 
                         <div class="form-check">
                             <input type="checkbox" id="exampleCheck1">
@@ -241,13 +259,6 @@
                             <input type="checkbox" id="exampleCheck2">
                             <label class="form-check-label" for="exampleCheck2">Check me out</label>
                         </div>
-
-                        <div class="form-check">
-                            <input type="checkbox" id="exampleDisabledCheck1" disabled>
-                            <label class="form-check-label" for="exampleDisabledCheck1">I'm disabled</label>
-                        </div>
-
-
 
                         <div class="form-check">
                             <input type="radio" name="exampleRadioGroup" id="exampleRadio1" value="1">
@@ -261,26 +272,10 @@
                             <label class="form-check-label" for="exampleRadio4">Check me out</label>
                         </div>
 
-                        <div class="form-check">
-                            <input type="radio" name="exampleRadioGroup" id="exampleDisabledRadio1" disabled value="3">
-                            <label class="form-check-label" for="exampleDisabledRadio1">Check me out</label>
-                            <input type="radio" name="exampleRadioGroup" id="exampleDisabledRadio3" disabled value="3">
-                            <label class="form-check-label" for="exampleDisabledRadio3">Check me out</label>
-                        </div>
 
+                        <!-- ======================================== -->
 
-
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect2">Example multiple select</label>
-                            <select id="exampleFormControlSelect2" multiple>
-                                <option>---</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
+                        <h3>Inputs</h3>
 
                         <div class="form-group" tablet="2-5">
                             <label for="exampleFirstName">First name</label>
@@ -298,6 +293,17 @@
                         </div>
 
 
+                        <!-- ======================================== -->
+
+                        <h3>Example Address</h3>
+
+                        <div class="form-group">
+                            <label for="exSteet">Address</label>
+                            <input type="text" id="exSteet" placeholder="Address">
+
+                            <label for="exSteet2">Address 2</label>
+                            <input type="text" id="exSteet2" placeholder="Address 2">
+                        </div>
 
                         <div class="form-group" tablet="1-2">
                             <label for="exampleCity">City</label>
@@ -366,6 +372,9 @@
                         </div>
 
 
+                        <!-- ======================================== -->
+
+                        <h3>Example Disabled Fields</h3>
 
                         <div class="form-group" tablet="1-2">
                             <label for="exampleDisabledText">Disabled Text</label>
@@ -382,6 +391,96 @@
                         </div>
 
 
+                        <div class="form-check">
+                            <input type="checkbox" id="exampleDisabledCheck1" disabled>
+                            <label class="form-check-label" for="exampleDisabledCheck1">I'm disabled</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="radio" name="exampleRadioGroup" id="exampleDisabledRadio1" disabled value="3">
+                            <label class="form-check-label" for="exampleDisabledRadio1">Check me out</label>
+                            <input type="radio" name="exampleRadioGroup" id="exampleDisabledRadio3" disabled value="3">
+                            <label class="form-check-label" for="exampleDisabledRadio3">Check me out</label>
+                        </div>
+
+
+                        <!-- ======================================== -->
+
+                        <h3>Example Text Field</h3>
+
+                        <div class="form-group">
+                            <label for="exampleTextArea">Example textarea</label>
+                            <textarea id="exampleTextArea"></textarea>
+                        </div>
+
+
+                        <!-- ======================================== -->
+
+                        <h3>Example Select Fields</h3>
+
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect">Example multiple select</label>
+                            <select id="exampleFormControlSelect">
+                                <option>---</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect2">Example multiple select</label>
+                            <select id="exampleFormControlSelect2" multiple>
+                                <option>---</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+
+                        <!-- ======================================== -->
+
+                        <h3>Example Input Groups</h3>
+
+                        <div class="form-group">
+                            <label for="exUserId">Username</label>
+                            <div class="input-group">
+                                <div class="prepend">@</div>
+                                <input type="text" id="exUserId" placeholder="username">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exUserEmail">Email address</label>
+                            <div class="input-group">
+                                <input type="text" id="exUserEmail" placeholder="name">
+                                <span>@email.com</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exInputGroupUrl">Vanity URL</label>
+                            <div class="input-group">
+                                <div class="prepend">https://example.com/users/</div>
+                                <input type="url" id="exInputGroupUrl" placeholder="username">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exSearchInput">Search Field</label>
+                            <div class="input-group">
+                                <input type="url" id="exSearchInput" placeholder="Search">
+                                <button class="btn-primary"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- ======================================== -->
 
                         <div class="form-group" tablet="1-2">
                             <button class="btn-block" type="submit">Submit</button>
@@ -392,7 +491,6 @@
                         </div>
 
                     </form>
-
                 </section>
 
 
@@ -441,9 +539,9 @@
                         </tbody>
                     </table>
                 </section>
-            </div>
+            </article>
 
-            <footer class="app-view-footer"></footer>
+            <!-- <footer class="app-view-footer"></footer> -->
         </main>
 
         <footer class="app-footer">
@@ -457,6 +555,36 @@
     </div>
 
 
+    <div class="app-sidebar" id="main-nav">
+
+        <button class="btn-primary" id="main-nav-toggle"><i class="fa fa-bars"></i></button>
+
+        <header class="app-logo-container">
+            App Logo Here
+        </header>
+
+        <nav class="app-navbar" role="navigation">
+            <ul>
+                <li class="app-nav-link"><a class="active" href="/FESJKLFE">Test</a></li>
+                <li class="app-nav-link"><a href="/FESJKLFE">Test</a></li>
+                <li class="app-nav-link"><a href="/FESJKLFE">Test</a></li>
+                <li class="app-nav-link"><a href="/FESJKLFE">Test</a></li>
+                <li class="app-nav-link"><a href="/FESJKLFE">Test</a></li>
+            </ul>
+        </nav>
+
+        <footer class="text-center">
+            &copy; 2017 Brandtley McMinn.<br>
+            <a href="https://github.com/bmcminn" title="Brandtley's Github"><i class="fa fa-github"></i></a>
+            <a href="https://twitter.com/brandtleymcminn" title="Brandtley's Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://dribbble.com/brandtleymcminn" title="Brandtley's Dribbble"><i class="fa fa-dribbble"></i></a>
+        </footer>
+    </div>
+
+
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
@@ -466,6 +594,7 @@
             let $mainNav            = $('#main-nav');
             let $doc                = $(document);
             let sidebarOpenClass    = 'open';
+            let activeClass         = 'active';
 
             const toggleMainNav = function (e) {
                 e.preventDefault();
@@ -485,6 +614,11 @@
 
             $doc.on('click', '#main-nav-toggle', toggleMainNav);
 
+            $doc.on('click', '.app-nav-link a', function(e) {
+                e.preventDefault(); // stop the site from navigating away from demo
+                $('.app-nav-link a').removeClass(activeClass);
+                $(this).toggleClass(activeClass);
+            });
         })(jQuery);
     </script>
 
