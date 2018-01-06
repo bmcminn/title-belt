@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></style>
-    <link rel="stylesheet" href="/dist/css/main.min.css">
+    <link rel="stylesheet" href="/dist/main.min.css">
 
 
     <style>
@@ -559,7 +559,7 @@
 
         <button class="btn-primary" id="main-nav-toggle"><i class="fa fa-bars"></i></button>
 
-        <header>
+        <header class="app-logo-container">
             App Logo Here
         </header>
 
@@ -614,9 +614,9 @@
 
             $doc.on('click', '#main-nav-toggle', toggleMainNav);
 
-            $doc.on('click', '.app-nav-link a', (e) => {
+            $doc.on('click', '.app-nav-link a', function(e) {
                 e.preventDefault(); // stop the site from navigating away from demo
-                $('.app-nav-link').removeClass(activeClass);
+                $('.app-nav-link a').removeClass(activeClass);
                 $(this).toggleClass(activeClass);
             });
         })(jQuery);

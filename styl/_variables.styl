@@ -22,18 +22,24 @@ $gray               = lighten($black, 50%)
 $gray-light         = lighten($black, 80%)
 
 
-DARKEN_COLORS       = 20%
+$DARKEN_COLORS      = 20%
 
-$blue-dark          = darken($blue, DARKEN_COLORS)
-$green-dark         = darken($green, DARKEN_COLORS)
-$yellow-dark        = darken($yellow, DARKEN_COLORS)
-$red-dark           = darken($red, DARKEN_COLORS)
+$blue-dark          = darken($blue, $DARKEN_COLORS)
+$green-dark         = darken($green, $DARKEN_COLORS)
+$yellow-dark        = darken($yellow, $DARKEN_COLORS)
+$red-dark           = darken($red, $DARKEN_COLORS)
 
 
 // COMPONENT DIMENSIONS
 $border-radius      = 3px
 
-$component-padding  = 0.5rem 0.8rem
+$mt = $mb = 0.5rem
+$ml = $mr = 1rem
+
+$component-padding  = $mt $ml
+
+$transition         = 0.3s ease
+
 
 
 // UI COLORS

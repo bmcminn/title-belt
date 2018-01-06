@@ -29,7 +29,8 @@ $scrollbar-width    = 15px
     top: 0
 
     width: 100%
-    height: $topbar-height
+    // height: $topbar-height
+    height: "calc(%s + 1px)" % $topbar-height
 
     border-bottom: 1px solid $border-color
     background-color: $app-topbar-bg-color
@@ -61,8 +62,21 @@ $scrollbar-width    = 15px
 
 #main-nav-toggle
     position: absolute
-    right: -60px
-    top: "calc(%s / 4)" % $topbar-height
+    right: -3.5rem
+    top: 0.8rem
+    padding: 0.35rem 0.8rem
+
+
+.app-logo-container
+    height: $topbar-height
+    vertical-align: middle
+
+
+
+.app-sidebar
+    footer
+        padding: 1rem
+
 
 
 @media (max-width: ($bp-lappy - 1))

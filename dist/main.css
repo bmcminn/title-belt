@@ -183,7 +183,7 @@ small {
   z-index: 1000;
   top: 0;
   width: 100%;
-  height: 60px;
+  height: calc(60px + 1px);
   border-bottom: 1px solid #d7d7d7;
   background-color: #fff;
 }
@@ -210,8 +210,16 @@ small {
 }
 #main-nav-toggle {
   position: absolute;
-  right: -60px;
-  top: calc(60px / 4);
+  right: -3.5rem;
+  top: 0.8rem;
+  padding: 0.35rem 0.8rem;
+}
+.app-logo-container {
+  height: 60px;
+  vertical-align: middle;
+}
+.app-sidebar footer {
+  padding: 1rem;
 }
 @media (max-width: 1023px) {
   .app-sidebar.open + .app-main-container {
@@ -232,6 +240,11 @@ small {
   .app-top-bar {
     width: calc(100vw - 320px - 15px);
   }
+}
+.app-navbar {
+  border: 1px solid #d7d7d7;
+  border-right: 0;
+  border-left: 0;
 }
 .app-nav-link a:link {
   color: #363636;
@@ -524,7 +537,7 @@ button,
 .btn {
   color: #fff;
   border-radius: 3px;
-  padding: 0.5rem 0.8rem;
+  padding: 0.5rem 1rem;
   border: 1px solid #0275d8;
   appearance: none;
   background-color: #0275d8;
@@ -547,12 +560,6 @@ button[disabled]:hover,
 button + button,
 .btn + .btn {
   margin-bottom: 0.5rem;
-}
-.btn-icon-left {
-  margin-right: 0.4rem;
-}
-.btn-icon-right {
-  margin-left: 0.4rem;
 }
 .btn-primary {
   background-color: #0275d8;
@@ -687,6 +694,12 @@ button + button,
 .btn-block + .btn-block {
   margin-top: 0.5rem;
 }
+.btn-icon-left {
+  margin-right: 0.4rem;
+}
+.btn-icon-right {
+  margin-left: 0.4rem;
+}
 form {
   font-size: 0;
   padding: 1rem 0.5rem;
@@ -721,7 +734,7 @@ form.card {
 input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
 select,
 textarea {
-  padding: 0.5rem 0.8rem;
+  padding: 0.5rem 1rem;
   border: 1px solid #d7d7d7;
   border-radius: 3px;
   width: 100%;
@@ -800,6 +813,26 @@ select {
   border: 1px solid var(--border-color);
   padding: 1rem;
   border-radius: 3px;
+}
+a:link {
+  color: #0275d8;
+  transition: color 0.3s ease;
+}
+a:visited {
+  color: #d9534f;
+}
+a:hover,
+a:focus {
+  color: #6ebbfe;
+}
+a:active {
+  color: #6ebbfe;
+}
+.content section {
+  margin-bottom: 2rem;
+}
+.content section + section {
+  margin-top: 5rem;
 }
 .text-left {
   text-align: left;

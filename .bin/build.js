@@ -57,7 +57,7 @@ function compileStyles(filepath) {
                 .toLowerCase()
             ;
 
-        let newStyle = path.join(CSS_DIR, filename.replace(/\.[\w\d]+/, ''));
+        let newStyle = path.join(DIST_DIR, filename.replace(/\.[\w\d]+/, ''));
 
         let content = fs.read(style);
 

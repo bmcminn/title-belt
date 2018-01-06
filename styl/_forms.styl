@@ -3,12 +3,13 @@
 //     width: 100%
 
 // .form-group + .form-group
-//     margin-top: 0.5rem
+//     margin-top: $mt
 
 
-$form-gutter = 1rem
-$form-group-padding = ($form-gutter * 0.25) $form-gutter
-$disabled-opacity = 0.5
+$form-gutter        = 1rem unless $ml
+// $form-group-padding = ($form-gutter * 0.25) $form-gutter
+
+$disabled-opacity   = 0.5
 
 
 // ==================================================
@@ -17,10 +18,10 @@ $disabled-opacity = 0.5
 
 form
     font-size: 0
-    padding: 1rem 0.5rem
+    padding: ($mt*2) $mt
 
 form.card
-    padding: 1rem 0.5rem
+    padding: ($mt*2) $mt
 
 
 
@@ -30,11 +31,9 @@ form.card
 
 .form-group, .form-check, .form-file
     width: 100%
-
     display: inline-block
-    // width: 'calc(100% + %s)' % ($form-gutter * 0)
     font-size: initial
-    padding: 0.25rem 0.5rem
+    padding: 0.25rem $mt
     position: relative;
 
     label, .label
@@ -58,7 +57,7 @@ textarea
     border: 1px solid $border-color
     border-radius: $border-radius
     width: 100%
-    margin: 0.5rem 0
+    margin: $mt 0
 
 textarea
     min-width: 100%
@@ -84,11 +83,11 @@ select
 // ==================================================
 
 [type="file"]
-    padding: 0.5rem 0.5rem 5rem
+    padding: $mt $mt 5rem
     border: 1px solid $border-color
     border-radius: $border-radius
     width: 100%
-    margin: 0.5rem 0
+    margin: $mt 0
     position: relative
     overflow: hidden
 
@@ -144,7 +143,7 @@ select
     display: flex
     border-radius: $border-radius
     border: 1px solid $border-color
-    margin: 0.5rem 0
+    margin: $mt 0
     overflow: hidden
 
     > *:not(button)

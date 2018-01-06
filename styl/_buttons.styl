@@ -1,9 +1,21 @@
 
 // =============================================
-// BUTTON VARIABLES
+// VARIABLES
 // =============================================
 
-$button-icon-spacing = 0.4rem
+// NOTE: `unless` prioritizes the _variables.styl value when available
+
+$button-icon-spacing    = 0.4rem
+$border-radius          = 3px unless $border-radius
+$DARKEN_COLORS          = 20% unless $DARKEN_COLORS
+
+
+$white = #fff unless $white
+
+
+
+// TODO: test :hover bug on buttons for touch devices
+
 
 
 // =============================================
@@ -36,19 +48,7 @@ button,
 
 button + button,
 .btn + .btn
-    margin-bottom: 0.5rem
-
-
-// =============================================
-// BUTTON ICON STYLES
-// =============================================
-
-.btn-icon-left
-    margin-right: $button-icon-spacing
-
-.btn-icon-right
-    margin-left: $button-icon-spacing
-
+    margin-bottom: $mt
 
 
 // MIXIN: _btn
@@ -69,14 +69,14 @@ _btn($NAME, $COLOR)
     .btn-{$NAME}:hover,
     .btn-{$NAME}.active,
     .btn-{$NAME}[aria-pressed="true"]
-        background-color: darken($COLOR, DARKEN_COLORS)
+        background-color: darken($COLOR, $DARKEN_COLORS)
 
     .btn-{$NAME}-outline:hover,
     .btn-{$NAME}-outline.active,
     .btn-{$NAME}-outline[aria-pressed="true"]
         color: $white
-        border-color: darken($COLOR, DARKEN_COLORS)
-        background-color: darken($COLOR, DARKEN_COLORS)
+        border-color: darken($COLOR, $DARKEN_COLORS)
+        background-color: darken($COLOR, $DARKEN_COLORS)
 
 
 
@@ -102,5 +102,17 @@ _btn(danger, $danger-color)
     width: 100%
 
 .btn-block + .btn-block
-    margin-top: 0.5rem
+    margin-top: $mt
+
+
+
+// =============================================
+// BUTTON ICON STYLES
+// =============================================
+
+.btn-icon-left
+    margin-right: $button-icon-spacing
+
+.btn-icon-right
+    margin-left: $button-icon-spacing
 
