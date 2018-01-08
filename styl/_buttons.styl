@@ -54,12 +54,13 @@ button + button,
 // MIXIN: _btn
 //  Generates a set of button styles using the provided defaults
 // ------------------------------
-_btn($NAME, $COLOR)
+_btn($NAME, $COLOR, $TEXT_OVERRIDE=$white)
 
     .btn-{$NAME}
         background-color: $COLOR
         border-color: $COLOR
         // text-shadow: 0 0 1px rgba(0, 0, 0, 0.6)
+        color: $TEXT_OVERRIDE
 
     .btn-{$NAME}-outline
         background-color: transparent
@@ -74,7 +75,7 @@ _btn($NAME, $COLOR)
     .btn-{$NAME}-outline:hover,
     .btn-{$NAME}-outline.active,
     .btn-{$NAME}-outline[aria-pressed="true"]
-        color: $white
+        color: $TEXT_OVERRIDE
         border-color: darken($COLOR, $DARKEN_COLORS)
         background-color: darken($COLOR, $DARKEN_COLORS)
 
@@ -88,7 +89,7 @@ _btn(primary, $primary-color)
 _btn(secondary, $secondary-color)
 _btn(info, $info-color)
 _btn(success, $success-color)
-_btn(warning, $warning-color)
+// _btn(warning, $warning-color, $black)
 _btn(danger, $danger-color)
 
 

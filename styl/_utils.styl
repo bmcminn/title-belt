@@ -1,0 +1,44 @@
+
+
+// @saauce: http://getbootstrap.com/docs/4.0/utilities/
+
+$min = 1
+$max = 4
+
+
+for num in ($min..$max)
+
+    // MARGINS
+    .mt-{num}
+        margin-top: "%srem" % num
+    .mr-{num}
+        margin-right: "%srem" % num
+    .mb-{num}
+        margin-bottom: "%srem" % num
+    .ml-{num}
+        margin-left: "%srem" % num
+
+    // PADDING
+    .pt-{num}
+        padding-top: "%srem" % num
+    .pr-{num}
+        padding-right: "%srem" % num
+    .pb-{num}
+        padding-bottom: "%srem" % num
+    .pl-{num}
+        padding-left: "%srem" % num
+
+
+
+clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+.clearfix
+    clearfix()
+
+
