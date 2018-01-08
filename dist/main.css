@@ -245,7 +245,7 @@ small {
   padding: 0.5rem 1rem;
   border-left: 3px solid transparent;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 .app-nav-link a.active,
 .app-nav-link a:hover {
@@ -722,7 +722,7 @@ textarea {
   border-radius: 3px;
   width: 100%;
   margin: 0.5rem 0;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   box-shadow: 0 0 transparent;
 }
 input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):focus,
@@ -747,7 +747,7 @@ select {
   background-color: #fff;
 }
 [type="file"] {
-  padding: 0.5rem 0.5rem 5rem;
+  padding: 0.5rem 0.5rem;
   border: 1px solid #d7d7d7;
   border-radius: 3px;
   width: 100%;
@@ -784,7 +784,15 @@ select {
   border: 1px solid #d7d7d7;
   margin: 0.5rem 0;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
+}
+.input-group.focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px #b7ddfe;
+  border-color: #8bc9fe;
+}
+.input-group > *:not(input):not(select):not(button) {
+  cursor: default;
 }
 .input-group > *:not(button) {
   display: flex;
@@ -810,11 +818,6 @@ select {
   outline: 0;
   box-shadow: none !important;
 }
-.input-group.focus {
-  outline: 0;
-  box-shadow: 0 0 0 3px #b7ddfe;
-  border-color: #8bc9fe;
-}
 .card {
   border: 1px solid var(--border-color);
   padding: 1rem;
@@ -822,7 +825,7 @@ select {
 }
 a:link {
   color: #0275d8;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 a:visited {
   color: #d9534f;
