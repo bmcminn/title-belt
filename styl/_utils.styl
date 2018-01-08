@@ -30,6 +30,29 @@ for num in ($min..$max)
 
 
 
+
+// ========================================
+
+.round
+    border-radius: 100%
+    overflow: hidden
+    height: 0
+    width: 0
+    padding: 1rem
+
+    .fa
+        transform: translate(-50%, -50%)
+
+.square
+    // overflow: hidden
+    height: 0
+    padding-bottom: 100%
+
+
+
+
+// ========================================
+
 clearfix() {
   &::after {
     display: block;
@@ -42,3 +65,20 @@ clearfix() {
     clearfix()
 
 
+
+
+// ========================================
+.sticky
+    position: fixed
+
+    &.top
+        top: 0
+
+    &.bottom
+        bottom: 0
+
+    &.left
+        left: 0
+
+    &.right
+        right: 0

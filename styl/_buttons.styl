@@ -35,6 +35,8 @@ button,
     text-align: center
     font-size: initial
     transition: all ease 0.3s
+    outline: 0
+    // user-select: none
 
     &:hover
         cursor: pointer
@@ -45,6 +47,8 @@ button,
         background-color: $white
         color: darken($disabled-color, 20%)
 
+    &:active, &:focus
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
 
 button + button,
 .btn + .btn

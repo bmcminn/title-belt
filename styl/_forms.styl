@@ -7,9 +7,12 @@
 
 
 $form-gutter        = 1rem unless $ml
-// $form-group-padding = ($form-gutter * 0.25) $form-gutter
+
+$component-padding  = 0.5rem 0.75rem
 
 $disabled-opacity   = 0.5
+
+$input-drop-shadow  = 0 0 0 3px lighten($primary-color, 75%)
 
 
 // ==================================================
@@ -53,11 +56,19 @@ form.card
 input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
 select,
 textarea
-    padding: $component-padding
+    padding: .5rem .65rem
     border: 1px solid $border-color
     border-radius: $border-radius
     width: 100%
     margin: $mt 0
+    transition: all 0.3s ease
+    box-shadow: 0 0 transparent
+
+    &:focus, &:active
+        outline: 0
+        box-shadow: $input-drop-shadow
+        border-color: lighten($primary-color, 60%)
+
 
 textarea
     min-width: 100%
@@ -145,6 +156,7 @@ select
     border: 1px solid $border-color
     margin: $mt 0
     overflow: hidden
+    transition: all 0.3s ease
 
     > *:not(button)
         display: flex
@@ -165,4 +177,12 @@ select
         margin: 0 !important
         background-color: $white
 
+    input, textarea
+        outline: 0
+        box-shadow: none !important
+
+    &.focus
+        outline: 0
+        box-shadow: $input-drop-shadow
+        border-color: lighten($primary-color, 60%)
 
