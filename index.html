@@ -29,8 +29,14 @@
 
     <div class="app-main-container">
 
-        <nav class="app-top-bar sticky top">
-            Top Navbar
+        <nav class="app-top-bar sticky top grid middle">
+            <div class="auto">
+                <b class="text-2x">Title Belt</b>
+            </div>
+            <div class="text-right">
+                <a href="#grids">Grids</a>
+                <a href="#buttons">Buttons</a>
+            </div>
         </nav>
 
         <main class="app-view-container grid" role="main">
@@ -39,7 +45,7 @@
                 <h1>App Style Guide</h1>
 
                 <section class="grid">
-                    <h2>Grids</h2>
+                    <h2><a id="grids">#</a>Grids</h2>
 
                     <p>
                         Grids in Throwdown are pretty straight-forward, create a wrapper <code>&lt;div&gt;</code> with a class <code>grid</code> and any block element you place inside of it will be contextualized as a column.
@@ -141,19 +147,17 @@
                         <div class="demo-col" tablet="1-2"><code>1-2</code></div>
 
                         <div class="demo-col" tablet="3-5"><code>3-5</code></div>
-                        <div class="demo-col" tablet="3-5"><code>3-5</code></div>
                         <div class="demo-col" tablet="2-5"><code>2-5</code></div>
                         <div class="demo-col" tablet="4-5"><code>4-5</code></div>
                         <div class="demo-col" tablet="1-5"><code>1-5</code></div>
-
-
 
                     </div>
                 </section>
 
 
                 <section>
-                    <h2>Button Styles</h2>
+                    <h2><a id="buttons">#</a>Buttons</h2>
+                    <h3>Button Styles</h3>
                     <button class="btn-primary">Default</button>
                     <button class="btn-secondary">Secondary</button>
                     <button class="btn-info">Info</button>
@@ -559,6 +563,7 @@
     </div>
 
 
+<!--
     <div class="app-sidebar sticky top left" id="main-nav">
 
         <button class="btn-primary round" id="main-nav-toggle"><i class="fa fa-bars"></i></button>
@@ -585,6 +590,7 @@
             <a href="https://dribbble.com/brandtleymcminn" title="Brandtley's Dribbble"><i class="fa fa-dribbble"></i></a>
         </footer>
     </div>
+ -->
 
 
 

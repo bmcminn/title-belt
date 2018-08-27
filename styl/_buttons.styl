@@ -7,7 +7,7 @@
 
 $button-icon-spacing    = 0.4rem
 $border-radius          = 3px unless $border-radius
-$DARKEN_COLORS          = 20% unless $DARKEN_COLORS
+$DARKEN_COLORS          = 15% unless $DARKEN_COLORS
 
 
 $white = #fff unless $white
@@ -55,33 +55,44 @@ button + button,
     margin-bottom: $mt
 
 
+
+
 // MIXIN: _btn
 //  Generates a set of button styles using the provided defaults
 // ------------------------------
-_btn($NAME, $COLOR, $TEXT_OVERRIDE=$white)
+_btn($NAME, $BG_COLOR)
+
+    $TEXT_COLOR = _colorContrast($BG_COLOR)
 
     .btn-{$NAME}
-        background-color: $COLOR
-        border-color: $COLOR
+        background-color: $BG_COLOR
+        border-color: $BG_COLOR
         // text-shadow: 0 0 1px rgba(0, 0, 0, 0.6)
-        color: $TEXT_OVERRIDE
+        color: $TEXT_COLOR
 
     .btn-{$NAME}-outline
         background-color: transparent
         border-color: initial
-        color: $COLOR
+        color: $BG_COLOR
 
-    .btn-{$NAME}:hover,
+    .btn-{$NAME}:hover
+        background-color: lighten($BG_COLOR, $DARKEN_COLORS)
+
+    .btn-{$NAME}:active,
     .btn-{$NAME}.active,
     .btn-{$NAME}[aria-pressed="true"]
-        background-color: darken($COLOR, $DARKEN_COLORS)
+        background-color: darken($BG_COLOR, $DARKEN_COLORS)
 
-    .btn-{$NAME}-outline:hover,
+    .btn-{$NAME}-outline:hover
+        color: $TEXT_COLOR
+        background-color: lighten($BG_COLOR, $DARKEN_COLORS)
+
+    .btn-{$NAME}-outline:active,
     .btn-{$NAME}-outline.active,
     .btn-{$NAME}-outline[aria-pressed="true"]
-        color: $TEXT_OVERRIDE
-        border-color: darken($COLOR, $DARKEN_COLORS)
-        background-color: darken($COLOR, $DARKEN_COLORS)
+        color: $TEXT_COLOR
+        border-color: darken($BG_COLOR, $DARKEN_COLORS)
+        background-color: darken($BG_COLOR, $DARKEN_COLORS)
 
 
 
@@ -89,12 +100,12 @@ _btn($NAME, $COLOR, $TEXT_OVERRIDE=$white)
 // BUTTON STATE STYLES
 // =============================================
 
-_btn(primary, $primary-color)
-_btn(secondary, $secondary-color)
-_btn(info, $info-color)
-_btn(success, $success-color)
-// _btn(warning, $warning-color, $black)
-_btn(danger, $danger-color)
+_btn(primary,       $primary-color)
+_btn(secondary,     $secondary-color)
+_btn(info,          $info-color)
+_btn(success,       $success-color)
+// _btn(warning,    $warning-color, $black)
+_btn(danger,        $danger-color)
 
 
 

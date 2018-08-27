@@ -1,22 +1,32 @@
 (function($){
 
+    let $doc            = $(document);
+
+    let openClass       = 'open';
+    let activeClass     = 'active';
+    let focusClass      = 'focus';
+
+
+    /**
+     * [toggleMainNav description]
+     * @param  {[type]} e [description]
+     * @return {[type]}   [description]
+     */
+
     let $mainNav            = $('#main-nav');
     let $mainView           = $('.app-main-container');
-    let $doc                = $(document);
-    let sidebarOpenClass    = 'open';
-    let activeClass         = 'active';
 
-    const toggleMainNav = function (e) {
+    function toggleMainNav(e) {
         e.preventDefault();
-        $mainNav.toggleClass(sidebarOpenClass);
-        $mainView.toggleClass(sidebarOpenClass);
+        $mainNav.toggleClass(openClass);
+        $mainView.toggleClass(openClass);
 
         var clickAway = function (e) {
             if ($mainNav[0] !== e.target
             &&  !$.contains($mainNav[0], e.target)
             ) {
-                $mainNav.removeClass(sidebarOpenClass);
-                $mainView.removeClass(sidebarOpenClass);
+                $mainNav.removeClass(openClass);
+                $mainView.removeClass(openClass);
                 $(document.body).off('click', clickAway);
             }
         };
@@ -24,17 +34,13 @@
         $(document.body).on('click', clickAway);
     }
 
-    $doc.on('click', '#main-nav-toggle', toggleMainNav);
 
-    $doc.on('click', '.app-nav-link a', function(e) {
-        e.preventDefault(); // stop the site from navigating away from demo
-        $('.app-nav-link a').removeClass(activeClass);
-        $(this).toggleClass(activeClass);
-    });
+    /**
+     * [syntaxHighlight description]
+     * @return {[type]} [description]
+     */
 
-
-    // HIGHLIGHT CODE SAMPLES
-    $('pre code').each(function() {
+    function syntaxHighlight() {
         let $this   = $(this);
         let lang    = $this.prop('lang');
         let code    = $this.html();
@@ -53,11 +59,27 @@
             ;
 
         $this.html(html);
-    });
+    }
 
 
-    // trigger focus when clicking on non-form elements in .input-groups
-    $doc.on('click', '.input-group *', function(e) {
+    /**
+     * Toggles active state on main nav items
+     * @param  {event} e event object
+     */
+
+    function toggleMainNavItems(e) {
+        e.preventDefault(); // stop the site from navigating away from demo
+        $('.app-nav-link a').removeClass(activeClass);
+        $(this).toggleClass(activeClass);
+    }
+
+
+    /**
+     * Triggers focus event on input groups
+     * @param  {[type]} e [description]
+     * @return {[type]}   [description]
+     */
+    function triggerInputGroup(e) {
         let targetTag = e.target.tagName.toLowerCase();
 
         if (targetTag !== 'input'
@@ -66,25 +88,40 @@
         ) {
             $(this).siblings('input, select').trigger('focus');
         }
-    });
+    }
 
 
-    $doc.on('focus', 'input, textarea', function() {
+    /**
+     * [toggleFocus description]
+     * @return {[type]} [description]
+     */
+    function toggleFocus(e) {
+
         let $this = $(this);
 
-        if ($this.parent().hasClass('input-group')) {
-            $this.parent().addClass('focus');
+        let parent = $this.parent();
+
+        if (parent.hasClass('input-group')) {
+            parent.hasClass(focusClass)
+                ? parent.removeClass(focusClass)
+                : parent.addClass(focusClass)
+                ;
+            ;
         }
-    });
+    }
 
 
-    $doc.on('blur', 'input, textarea', function() {
-        let $this = $(this);
+    // HIGHLIGHT CODE SAMPLES
+    $('pre code').each(syntaxHighlight);
 
-        if ($this.parent().hasClass('input-group')) {
-            $this.parent().removeClass('focus');
-        }
-    });
+    // DEFINE EVENT HANDLERS FOR PAGE
+    $doc.on('click', '#main-nav-toggle', toggleMainNav);
+    $doc.on('click', '.app-nav-link a', toggleMainNavItems);
 
+    // trigger focus when clicking on non-form elements in .input-groups
+    $doc.on('click', '.input-group *', triggerInputGroup);
+
+    $doc.on('focus', 'input, textarea', toggleFocus);
+    $doc.on('blur', 'input, textarea', toggleFocus);
 
 })(jQuery);

@@ -1,0 +1,11 @@
+// Ensures our color is
+// @sauce: https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/
+_colorContrast($BG_COLOR)
+    $THRESHOLD  = 0.6
+    $RED        = red($BG_COLOR)   * 0.2126
+    $GREEN      = green($BG_COLOR) * 0.7152
+    $BLUE       = blue($BG_COLOR)  * 0.0722
+    $PLIGHTNESS = (($RED + $GREEN + $BLUE) / 255)
+    // $TEXT_COLOR = lightness($COLOR)
+    $RES = hsl(0, 0%, (($PLIGHTNESS - $THRESHOLD) * -10000000%))
+    return $RES

@@ -4,24 +4,36 @@ $grid-gutter-width = round(1rem / 2, $rounding-precision)
 
 .grid
     font-size: 0
-    width: 100%
+    // width: 100%
     padding: var(--grid-gutter-width)
+    display: flex
+    flex: 0 1 auto
+    flex-direction: row
+    flex-wrap: wrap
+
+    > .grid
+        margin: calc(var(--grid-gutter-width)*-1)
+        width: calc(100% + (var(--grid-gutter-width) * 2))
+        font-size: inherit
+
+    &.middle
+        align-items: center
 
 
-.grid > .grid
-    margin: calc(var(--grid-gutter-width)*-1)
-    width: calc(100% + (var(--grid-gutter-width) * 2))
-    font-size: inherit
 
 
 .grid >
     *
     // div, span, section, main, article, header, footer, form
         font-size: initial
-        width: 100%
+        // width: 100%
         display: inline-block
         padding: var(--grid-gutter-width)
+        flex: 0 0 auto
+        flex-grow: 1
 
+    &.flex-auto
+        flex-grow: 1
 
 
 mq_grid($TITLE, $BP_MIN, $BP_MAX=0)
