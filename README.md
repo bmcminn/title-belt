@@ -1,11 +1,11 @@
 # Title Belt
 
-> CSS framework for the Throwdown PHP framework.
+> CSS toolbelt framework for whipping your project UI into shape!
 
 
 ## Introduction
 
-This is a simple CSS framework intended to be intuitive and easy to use. More of a one-two punch for getting your content in shape.
+This is a simple CSS utility library intended to be intuitive and easy to use.
 
 
 ## TODO:
@@ -13,4 +13,4 @@ This is a simple CSS framework intended to be intuitive and easy to use. More of
 - Finish readme.md
     - Document grid.styl
 - ~~Include build process~~
-- Convert to .less?
+- ~~Convert to .less?~~
