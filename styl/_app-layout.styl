@@ -1,10 +1,4 @@
 
-$z      = 10
-$zz     = ($z * 10)
-$zzz    = ($zz * 10)
-$zzzz   = ($zzz * 10)
-
-
 $sidebar-width      = 320px
 $topbar-height      = 60px
 
@@ -30,7 +24,7 @@ $scrollbar-width    = 15px
     // height: $topbar-height
     height: "calc(%s + 1px)" % $topbar-height
 
-    border-bottom: 1px solid $border-color
+    border-bottom: 1px solid $color-border
     background-color: $app-topbar-bg-color
 
 
@@ -43,7 +37,7 @@ $scrollbar-width    = 15px
     transition: transform ease .3s
     transform: translate(-100%, 0)
 
-    border-right: 1px solid $border-color
+    border-right: 1px solid $color-border
     background-color: $white
 
     &.open

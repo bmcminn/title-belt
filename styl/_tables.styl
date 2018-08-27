@@ -1,7 +1,7 @@
 
 
 $cell-padding   = 0.5rem
-$cell-bg-color  = lighten($border-color, 80%)
+$cell-bg-color  = lighten($color-border, 80%)
 
 
 .table
@@ -13,7 +13,7 @@ $cell-bg-color  = lighten($border-color, 80%)
 
     tr
             padding: $cell-padding
-            border-bottom: 1px solid $border-color
+            border-bottom: 1px solid $color-border
             display: block
 
     td
@@ -33,7 +33,7 @@ $cell-bg-color  = lighten($border-color, 80%)
 
 
         thead > tr
-            border-bottom: 2px solid $border-color
+            border-bottom: 2px solid $color-border
 
         tr
             display: table-row
